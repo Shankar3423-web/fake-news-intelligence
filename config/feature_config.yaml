@@ -1,0 +1,56 @@
+# Configuration file for Phase 4: Feature Engineering Module
+
+# --- Feature Group Toggles ---
+steps:
+  statistical_features: true
+  readability_features: true
+  lexical_features: true
+  tfidf_features: true
+  linguistic_features: true
+  symbol_features: true
+
+# --- Step Specific Parameters ---
+tfidf:
+  max_features: 5000  # Maximum vocabulary size for TF-IDF
+  ngram_range: [1, 2] # Term n-gram range (e.g. unigrams & bigrams)
+  min_df: 2
+  max_df: 0.95
+  sublinear_tf: true
+
+short_words:
+  max_length: 3
+
+long_words:
+  min_length: 6
+
+stopwords:
+  language: "english"
+
+linguistic:
+  spacy_model: "en_core_web_sm"
+
+# --- Performance & Execution ---
+pipeline:
+  pipeline_batch_size: 1000  # Number of rows to process in a single batch
+  spacy_batch_size: 128      # Internal batch size for spaCy nlp.pipe
+
+# --- File Paths (relative to project root) ---
+paths:
+  input_dataset: "ml/preprocessing/processed/preprocessed_dataset_v1.csv"
+  output_dataset: "ml/feature_engineering/processed/feature_dataset_v1.csv"
+  tfidf_vectorizer: "ml/feature_engineering/processed/tfidf_vectorizer.joblib"
+  tfidf_matrix: "ml/feature_engineering/processed/tfidf_matrix.joblib"
+  
+  # Reports and metadata directories
+  processed_dir: "ml/feature_engineering/processed"
+  reports_dir: "ml/feature_engineering/reports"
+  statistics_dir: "ml/feature_engineering/statistics"
+  logs_dir: "ml/feature_engineering/logs"
+  versions_dir: "ml/feature_engineering/versions"
+  
+  # Outputs
+  statistics_file: "ml/feature_engineering/statistics/feature_statistics.json"
+  profile_file: "ml/feature_engineering/statistics/feature_profile.json"
+  quality_report_file: "ml/feature_engineering/reports/feature_quality_report.md"
+  hash_file: "ml/feature_engineering/statistics/feature_hash.json"
+  versions_file: "ml/feature_engineering/statistics/feature_versions.json"

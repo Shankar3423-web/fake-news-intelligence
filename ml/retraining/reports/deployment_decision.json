@@ -1,0 +1,44 @@
+{
+    "retraining_run_id": "retrain_20260719_183430_f54e5499",
+    "timestamp": "2026-07-19T13:05:29Z",
+    "decision": "REJECTED",
+    "reason": "Candidate rejected: weighted_score 0.9986 \u2264 production 0.9986 \u2014 production model retained.",
+    "candidate_model_key": "xgboost",
+    "candidate_metrics": {
+        "accuracy": 0.998321,
+        "precision": 0.99945,
+        "recall": 0.997072,
+        "f1_score": 0.998259,
+        "roc_auc": 0.999906,
+        "balanced_accuracy": 0.99828,
+        "mcc": 0.99664,
+        "inference_time_sec": 0.03124,
+        "prediction_time_sec": 0.03124,
+        "memory_used_mb": 0.0,
+        "model_size_bytes": 226444,
+        "model_size_mb": 0.216
+    },
+    "production_metrics": {
+        "accuracy": 0.998321,
+        "precision": 0.99945,
+        "recall": 0.997072,
+        "f1_score": 0.998259,
+        "roc_auc": 0.999906,
+        "balanced_accuracy": 0.99828,
+        "mcc": 0.99664,
+        "inference_time_sec": 0.03009,
+        "prediction_time_sec": 0.03009,
+        "memory_used_mb": 0.0,
+        "model_size_bytes": 226444,
+        "model_size_mb": 0.216
+    },
+    "comparison_summary": {
+        "primary_metric": "f1_score",
+        "delta": 0.0,
+        "candidate_score": 0.998599,
+        "production_score": 0.998599,
+        "thresholds_passed": true
+    },
+    "promoted_model_path": null,
+    "production_backup_path": null
+}

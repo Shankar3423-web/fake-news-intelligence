@@ -1,0 +1,35 @@
+{
+    "timestamp": "2026-07-15 22:25:51",
+    "execution_status": "Success",
+    "pipeline_summary": {
+        "total_raw_rows_loaded": 64908,
+        "total_rows_dropped_missing_mandatory": 0,
+        "total_rows_removed_duplicates": 7621,
+        "total_final_rows_preserved": 56646,
+        "yield_percentage": 87.2712
+    },
+    "source_breakdown": {
+        "raw": {
+            "isot_true": 21417,
+            "isot_fake": 23481,
+            "india_true": 10005,
+            "india_fake": 10005
+        },
+        "cleaned": {
+            "isot_true": 21416,
+            "isot_fake": 22841,
+            "india_true": 10005,
+            "india_fake": 10005
+        }
+    },
+    "class_distribution": {
+        "real_news_count": 29256,
+        "fake_news_count": 27390,
+        "real_ratio": 51.6471,
+        "fake_ratio": 48.3529
+    },
+    "file_metadata": {
+        "master_dataset_file": "ml/dataset/processed/master_dataset_v1.csv",
+        "master_dataset_size_bytes": 110024337
+    }
+}

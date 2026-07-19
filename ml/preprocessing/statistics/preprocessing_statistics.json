@@ -1,0 +1,33 @@
+{
+    "Rows Processed": 56573,
+    "Rows Failed": 48,
+    "Languages": {
+        "en": 56621,
+        "sq": 3,
+        "sw": 4,
+        "it": 2,
+        "ca": 1,
+        "sk": 3,
+        "fr": 2,
+        "tl": 2,
+        "lt": 1,
+        "id": 1,
+        "pl": 1,
+        "af": 1,
+        "da": 1,
+        "pt": 1,
+        "no": 1,
+        "es": 1
+    },
+    "Average Token Count": 172.79,
+    "Average Word Count": 289.05,
+    "Average Character Count": 1788.22,
+    "Average Clean Text Length": 1215.81,
+    "Stopwords Removed": 6916195,
+    "URLs Removed": 3670,
+    "Emails Removed": 44,
+    "HTML Tags Removed": 215,
+    "Emoji Count": 10009,
+    "Special Character Count": 178691,
+    "Execution Time": 1942.15
+}

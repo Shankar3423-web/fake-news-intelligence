@@ -1,0 +1,40 @@
+[
+    {
+        "Version Number": "v1",
+        "Creation Timestamp": "2026-07-13 23:58:24",
+        "Input Datasets": {
+            "isot_true_rows": 21417,
+            "isot_fake_rows": 23481,
+            "india_true_rows": 10005,
+            "india_fake_rows": 10005
+        },
+        "Total Records": 56646,
+        "Rows Removed": 8262,
+        "Duplicate Count": 7621,
+        "Missing Value Count": 0,
+        "Invalid Value Count": 641,
+        "Dataset Hash": "599fb350a14645939a99ad274a6603ad9f1636d1deca996581bfc8f0a596befb",
+        "Pipeline Execution Time": "65.98s",
+        "Master Dataset File Name": "master_dataset_v1.csv",
+        "Current Dataset Version": "v1"
+    },
+    {
+        "Version Number": "v2",
+        "Creation Timestamp": "2026-07-15 22:25:51",
+        "Input Datasets": {
+            "isot_true_rows": 21417,
+            "isot_fake_rows": 23481,
+            "india_true_rows": 10005,
+            "india_fake_rows": 10005
+        },
+        "Total Records": 56646,
+        "Rows Removed": 8262,
+        "Duplicate Count": 7621,
+        "Missing Value Count": 0,
+        "Invalid Value Count": 641,
+        "Dataset Hash": "599fb350a14645939a99ad274a6603ad9f1636d1deca996581bfc8f0a596befb",
+        "Pipeline Execution Time": "98.96s",
+        "Master Dataset File Name": "master_dataset_v1.csv",
+        "Current Dataset Version": "v2"
+    }
+]

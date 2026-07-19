@@ -1,0 +1,12 @@
+{
+    "pipeline_name": "Phase 11 - Admin Review System",
+    "pipeline_version": "1.0.0",
+    "system_version": "1.0.0",
+    "configuration_version": "1.0.0",
+    "last_executed": "2026-07-19T22:27:50.918675",
+    "status": "OPERATIONAL",
+    "environment": {
+        "os": "nt",
+        "project_root": "C:\\Users\\nered\\Desktop\\fake news detection"
+    }
+}

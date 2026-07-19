@@ -1,0 +1,9 @@
+{
+    "model_used": "svm",
+    "training_version": "run_2_20260719_085859",
+    "evaluation_version": "evaluation_v2",
+    "feature_version": "2",
+    "prediction_version": "prediction_v27",
+    "pipeline_version": "1.0.0",
+    "prediction_timestamp": "2026-07-19T22:20:51.014589"
+}

@@ -1,0 +1,49 @@
+# Configuration file for Phase 2: Dataset Engineering Pipeline
+
+# --- Duplicate Detection Options ---
+duplicate_detection:
+  batch_size: 2000
+  similarity_threshold: 0.95
+  max_features: 5000
+
+# --- Dataset Validation and Schema Definitions ---
+schemas:
+  supported_extensions:
+    - ".csv"
+    - ".xlsx"
+    - ".xls"
+  
+  target_columns:
+    - "id"
+    - "title"
+    - "text"
+    - "label"
+    - "source"
+    - "category"
+    - "author"
+    - "published_date"
+    - "language"
+    - "url"
+    - "dataset_origin"
+
+  mandatory_fields:
+    - "title"
+    - "text"
+    - "label"
+
+# --- Localization & Formats ---
+defaults:
+  language: "en"
+  date_format: "%Y-%m-%d"
+
+# --- Output File Locations (relative to project root) ---
+paths:
+  raw_dir: "ml/dataset/raw"
+  cleaned_dir: "ml/dataset/cleaned"
+  merged_dir: "ml/dataset/merged"
+  processed_dir: "ml/dataset/processed"
+  statistics_dir: "ml/dataset/statistics"
+  removed_dir: "ml/dataset/removed"
+  versions_dir: "ml/dataset/versions"
+  reports_dir: "ml/dataset/reports"
+  logs_dir: "logs"

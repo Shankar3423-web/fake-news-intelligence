@@ -1,0 +1,25 @@
+{
+    "model_name": "random_forest",
+    "algorithm": "Random Forest",
+    "training_date": "2026-07-19T03:28:36.931762+00:00",
+    "training_time": 2.1546,
+    "memory_used_mb": 3.5,
+    "feature_count": 283,
+    "dataset_version": "1.0.1",
+    "feature_selection_version": "2",
+    "random_seed": 42,
+    "hyperparameters": {},
+    "train_test_ratio": "80/20",
+    "training_samples": 45258,
+    "testing_samples": 11315,
+    "python_version": "3.13.9",
+    "library_versions": {
+        "python": "3.13.9",
+        "scikit-learn": "1.6.1",
+        "xgboost": "3.0.0",
+        "joblib": "1.4.2",
+        "pandas": "2.2.3",
+        "numpy": "2.2.4",
+        "yaml": "6.0.3"
+    }
+}

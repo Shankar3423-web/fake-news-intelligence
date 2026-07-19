@@ -1,0 +1,9 @@
+{
+    "initial_rows": 64277,
+    "exact_title_duplicates_removed": 5987,
+    "exact_text_duplicates_removed": 18,
+    "similarity_duplicates_removed": 0,
+    "duplicate_pairs_sampled": [],
+    "final_rows": 58272,
+    "time_taken_seconds": 61.2569
+}

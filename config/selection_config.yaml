@@ -1,0 +1,72 @@
+# Configuration file for Phase 5: Feature Selection Module
+
+# --- Selector Enablement and Settings ---
+selectors:
+  variance:
+    enabled: true
+    threshold: 0.001  # Remove features with Min-Max scaled variance below this threshold
+  
+  correlation:
+    enabled: true
+    threshold: 0.85   # Pearson correlation threshold for removing redundant dense features
+  
+  mutual_information:
+    enabled: true
+    top_k_dense: 15    # Select top K dense features using mutual information
+    top_k_sparse: 150  # Select top K sparse (TF-IDF) features using mutual information
+    sub_sample_size: 10000  # Number of samples to sub-sample for MI computation (to speed up)
+  
+  chi_square:
+    enabled: true
+    top_k_dense: 15    # Select top K dense features using chi-square
+    top_k_sparse: 200  # Select top K sparse (TF-IDF) features using chi-square
+  
+  random_forest:
+    enabled: true
+    n_estimators: 50
+    max_depth: 10
+    random_state: 42
+    top_k: 100         # Select top K features based on Random Forest feature importances
+    pre_selected_pool_size: 300 # Limit RF input to top K features (from MI/Chi-Square) to speed up
+  
+  rfe:
+    enabled: true
+    n_features_to_select: 30
+    step: 5            # Number of features to drop at each step in RFE
+    random_state: 42
+    pre_selected_pool_size: 80 # Limit RFE input to top K features (from merger/voting) to speed up
+
+# --- Merger / Voting Settings ---
+merger:
+  strategy: "voting"   # Selection strategy: "voting", "union", or "intersection"
+  voting_threshold: 2  # Keep feature if selected by at least 2 selectors (applies only for "voting" strategy)
+
+# --- Performance & Execution ---
+pipeline:
+  random_state: 42
+  batch_size: 5000     # Batch size for dataset reading/writing operations
+
+# --- File Paths (relative to project root) ---
+paths:
+  # Input files
+  input_csv: "ml/feature_engineering/processed/feature_dataset_v1.csv"
+  input_tfidf_matrix: "ml/feature_engineering/processed/tfidf_matrix.joblib"
+  input_tfidf_vectorizer: "ml/feature_engineering/processed/tfidf_vectorizer.joblib"
+  
+  # Directory Outputs
+  processed_dir: "ml/feature_selection/processed"
+  models_dir: "ml/feature_selection/models"
+  reports_dir: "ml/feature_selection/reports"
+  statistics_dir: "ml/feature_selection/statistics"
+  versions_dir: "ml/feature_selection/versions"
+  logs_dir: "ml/feature_selection/logs"
+  
+  # Specific Output Files
+  output_csv: "ml/feature_selection/processed/selected_feature_dataset_v1.csv"
+  selected_names: "ml/feature_selection/processed/selected_feature_names.json"
+  feature_rankings: "ml/feature_selection/processed/feature_rankings.json"
+  summary_file: "ml/feature_selection/processed/feature_selection_summary.json"
+  statistics_file: "ml/feature_selection/statistics/selection_statistics.json"
+  versions_file: "ml/feature_selection/statistics/selection_versions.json"
+  report_file: "ml/feature_selection/reports/feature_selection_report.md"
+  hash_file: "ml/feature_selection/statistics/selection_hash.json"

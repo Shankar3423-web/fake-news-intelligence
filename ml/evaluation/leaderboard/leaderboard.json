@@ -1,0 +1,42 @@
+[
+    {
+        "Rank": 1,
+        "Model": "Linear SVM",
+        "Model Key": "svm",
+        "Overall Score": 0.996363,
+        "F1": 0.994507,
+        "ROC": 0.999687,
+        "Prediction Speed": 863233.06,
+        "Memory": 0.0
+    },
+    {
+        "Rank": 2,
+        "Model": "XGBoost",
+        "Model Key": "xgboost",
+        "Overall Score": 0.979649,
+        "F1": 0.998993,
+        "ROC": 0.999988,
+        "Prediction Speed": 522690.74,
+        "Memory": 0.29
+    },
+    {
+        "Rank": 3,
+        "Model": "Random Forest",
+        "Model Key": "random_forest",
+        "Overall Score": 0.960607,
+        "F1": 0.997984,
+        "ROC": 0.999948,
+        "Prediction Speed": 204899.85,
+        "Memory": 3.28
+    },
+    {
+        "Rank": 4,
+        "Model": "Logistic Regression",
+        "Model Key": "logistic_regression",
+        "Overall Score": 0.957982,
+        "F1": 0.941101,
+        "ROC": 0.988177,
+        "Prediction Speed": 861701.32,
+        "Memory": 0.2
+    }
+]

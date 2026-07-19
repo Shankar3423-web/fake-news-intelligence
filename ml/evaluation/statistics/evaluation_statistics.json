@@ -1,0 +1,21 @@
+{
+    "dataset_size_bytes": 170484084,
+    "dataset_rows": 11315,
+    "feature_count": 283,
+    "prediction_times": {
+        "logistic_regression": 0.0131,
+        "svm": 0.0131,
+        "random_forest": 0.0552,
+        "xgboost": 0.0216
+    },
+    "average_prediction_time_sec": 0.0258,
+    "memory_usages": {
+        "logistic_regression": 0.2,
+        "svm": 0.0,
+        "random_forest": 3.28,
+        "xgboost": 0.29
+    },
+    "total_models_evaluated": 4,
+    "best_model": "svm",
+    "evaluation_pipeline_duration_sec": 5.955
+}

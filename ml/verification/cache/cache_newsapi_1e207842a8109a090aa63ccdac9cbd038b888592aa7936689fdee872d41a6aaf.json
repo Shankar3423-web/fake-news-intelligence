@@ -1,0 +1,62 @@
+{
+  "timestamp": 1784479014.6355174,
+  "provider": "newsapi",
+  "query": "Apple MacBook Pro the M2 Pro performance laptops inch",
+  "response": [
+    {
+      "title": "Apple MacBook Neo Long-Term Review: 27 Days On The Road",
+      "description": "Apple MacBook Neo - Starting At $699 Apple’s MacBook Neo sets a new bar for affordable laptops by delivering premium materials, impressive build quality, solid performance, excellent battery life, and great value. Impressive build quality, no flex Aluminum an…",
+      "content": "<table><tr><td></td><td>Apple MacBook Neo - Starting At $699Apple’s MacBook Neo sets a new bar for affordable laptops by delivering premium materials, impressive build quality, solid performance, exc… [+10233 chars]",
+      "url": "https://hothardware.com/reviews/apple-macbook-neo-review",
+      "source": "Hot Hardware",
+      "author": "Myriam Joire",
+      "published_date": "2026-07-02T17:15:00Z",
+      "language": "en",
+      "provider": "newsapi"
+    },
+    {
+      "title": "These Early Prime Day Apple Deals Slash Prices on AirPods, Apple Watch, iPads and More",
+      "description": "It's almost Prime Day and good deals on Apple's most popular devices, including MacBooks and AirPods, are already live.",
+      "content": "Apple isn't known for discounting its own products; at most, it tends to include gift cards with orders. However, major shopping events like Amazon Prime Day are excellent opportunity to save big on … [+5500 chars]",
+      "url": "https://www.cnet.com/deals/best-prime-day-apple-deals-2026-06-22/",
+      "source": "CNET",
+      "author": "Oliver Haslam",
+      "published_date": "2026-06-22T10:20:00Z",
+      "language": "en",
+      "provider": "newsapi"
+    },
+    {
+      "title": "AirPods, iPads, MacBooks and More Are All on Sale This Prime Day and Apple Fans Are Eating Good",
+      "description": "Grab steep discounts on Apple's biggest products. We've found some of the best.",
+      "content": "Apple rarely discounts its products directly, which is why Amazon Prime Day is one of the best times of the year to buy. With the sale now underway, shoppers can find significant savings on popular A… [+5541 chars]",
+      "url": "https://www.cnet.com/deals/best-prime-day-apple-deals-2026-06-23/",
+      "source": "CNET",
+      "author": "Oliver Haslam",
+      "published_date": "2026-06-23T12:43:00Z",
+      "language": "en",
+      "provider": "newsapi"
+    },
+    {
+      "title": "Apple Prime Day Deals Are Actually Good This Year: The Best Ones to Shop Right Now",
+      "description": "Score some of the lowest prices of the year on MacBooks, iPads and AirPods.",
+      "content": "Amazon Prime Day has become one of the best opportunities of the year to save on Apple gear. Since Apple rarely cuts prices on its own products, major sales events are often the best time for shopper… [+5550 chars]",
+      "url": "https://www.cnet.com/deals/best-prime-day-apple-deals-2026-06-24/",
+      "source": "CNET",
+      "author": "Oliver Haslam",
+      "published_date": "2026-06-24T08:08:00Z",
+      "language": "en",
+      "provider": "newsapi"
+    },
+    {
+      "title": "Want a New Apple Watch or iPad? Here Are 40+ Best Prime Day Deals Happening Right Now",
+      "description": "Prime Day deals are live, and Amazon is cutting prices on a ton of Apple tech and accessories.",
+      "content": "Amazon Prime Day is one of the best times of the year to buy Apple gear, and this year's sale includes some particularly good deals. Since Apple rarely discounts its own products, major sales events … [+5702 chars]",
+      "url": "https://www.cnet.com/deals/best-prime-day-apple-deals-2026-06-25/",
+      "source": "CNET",
+      "author": "Oliver Haslam",
+      "published_date": "2026-06-25T08:02:00Z",
+      "language": "en",
+      "provider": "newsapi"
+    }
+  ]
+}

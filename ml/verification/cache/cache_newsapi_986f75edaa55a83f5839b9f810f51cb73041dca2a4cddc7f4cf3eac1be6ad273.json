@@ -1,0 +1,51 @@
+{
+  "timestamp": 1784474182.3579865,
+  "provider": "newsapi",
+  "query": "The Federal Reserve Jerome Powell Fed Wednesday interest rate",
+  "response": [
+    {
+      "title": "Traders boost US rate-hike bets on hawkish Fed",
+      "description": "Traders are now fully anticipating a quarter-point interest rate hike from the Federal Reserve by September, a shift driven by renewed inflation worries fueled by a surge in oil prices. New Fed Chair Kevin Warsh's firm stance against high inflation has bolste…",
+      "content": "Traders added to wagers for Federal Reserve interest-rate hikes, fully pricing a quarter-point increase by September after a spike in oil prices revived inflation concerns.Swaps tied to policy-meetin… [+1301 chars]",
+      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/traders-boost-us-rate-hike-bets-on-hawkish-fed/articleshow/131869433.cms",
+      "source": "The Times of India",
+      "author": "Bloomberg",
+      "published_date": "2026-06-20T02:18:58Z",
+      "language": "en",
+      "provider": "newsapi"
+    },
+    {
+      "title": "Gold And Silver Futures Fall As Fed Indicates Future Hikes",
+      "description": "Gold and silver futures both declined Thursday morning, one day after the Federal Reserve held rates steady and suggested future hikes are coming.",
+      "content": "Gold and silver futures fell Thursday morning after the Federal Reserve held interest rates steady but indicated rate hikes could come this year, though some analysts have said the United States and … [+3361 chars]",
+      "url": "https://www.forbes.com/sites/conormurray/2026/06/18/gold-and-silver-futures-fall-as-fed-indicates-future-hikes/",
+      "source": "Forbes",
+      "author": "Conor Murray, Forbes Staff, \n Conor Murray, Forbes Staff\n https://www.forbes.com/sites/conormurray/",
+      "published_date": "2026-06-18T14:04:50Z",
+      "language": "en",
+      "provider": "newsapi"
+    },
+    {
+      "title": "Here’s What Fed Chair Warsh Will (And Won’t) Tell Congress Next Week",
+      "description": "Federal Reserve Chair Kevin Warsh will visit Congress next week, where he will reaffirm the central bank’s commitment to bringing inflation under control.",
+      "content": "Credit: Tom Williams / CQ-Roll Call, Inc via Getty Images\r\nKey Takeaways\r\n<ul><li>Federal Reserve Chair Kevin Warsh will visit Congress next week, where he will field questions from lawmakers and res… [+3388 chars]",
+      "url": "https://www.investopedia.com/heres-what-fed-chair-warsh-will-tell-congress-wednesday-12016258",
+      "source": "Investopedia",
+      "author": "Diccon Hyatt",
+      "published_date": "2026-07-10T20:01:54Z",
+      "language": "en",
+      "provider": "newsapi"
+    },
+    {
+      "title": "Fed chairman says inflation risks are declining, predicts AI will create jobs",
+      "description": "Federal Reserve Chairman Kevin Warsh said that inflation risks have declined but that the central bank still had more work to do to rein in prices.",
+      "content": "Federal Reserve Chairman Kevin Warsh said Wednesday that inflation risks have declined in recent weeks but that the central bank still had more work to do to rein in rising prices.\r\nLimited time: Sav… [+5252 chars]",
+      "url": "https://www.nbcnews.com/business/economy/fed-chairman-warsh-inflation-ai-jobs-rcna352550",
+      "source": "NBC News",
+      "author": "Steve Kopack",
+      "published_date": "2026-07-01T16:00:59Z",
+      "language": "en",
+      "provider": "newsapi"
+    }
+  ]
+}

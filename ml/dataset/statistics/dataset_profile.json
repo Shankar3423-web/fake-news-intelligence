@@ -1,0 +1,137 @@
+{
+    "summary": {
+        "total_articles": 56646,
+        "real_articles": 29256,
+        "fake_articles": 27390,
+        "indian_articles": 18462,
+        "isot_articles": 38184,
+        "duplicate_count": 7621,
+        "duplicate_percentage": 11.8583
+    },
+    "distributions": {
+        "language": {
+            "en": 56646
+        },
+        "category": {
+            "politicsNews": 11134,
+            "worldnews": 9665,
+            "News": 9048,
+            "politics": 6367,
+            "Business": 1265,
+            "Crime": 1259,
+            "Education": 1249,
+            "Technology": 1246,
+            "Entertainment": 1230,
+            "International": 1229,
+            "Judiciary": 1225,
+            "Government Schemes": 1221,
+            "Science": 1220,
+            "Finance": 1220,
+            "Environment": 1220,
+            "Health": 1220,
+            "Sports": 1220,
+            "Politics": 1219,
+            "Economy": 1219,
+            "US_News": 777,
+            "left-news": 680,
+            "Government News": 513
+        },
+        "source": {
+            "None": 38184,
+            "Vishvas News": 1251,
+            "PIB Fact Check": 1251,
+            "Factly": 1251,
+            "AFP Fact Check India": 1251,
+            "BOOM Live": 1251,
+            "Alt News": 1250,
+            "India Today Fact Check": 1250,
+            "The Quint WebQoof": 1250,
+            "Indian Express": 1069,
+            "PIB": 1068,
+            "Livemint": 1063,
+            "Press Trust of India (PTI)": 1060,
+            "Times of India": 1050,
+            "Business Standard": 1050,
+            "Hindustan Times": 1050,
+            "The Hindu": 1047
+        }
+    },
+    "top_analytics": {
+        "top_categories": {
+            "politicsNews": 11134,
+            "worldnews": 9665,
+            "News": 9048,
+            "politics": 6367,
+            "Business": 1265
+        },
+        "top_sources": {
+            "Vishvas News": 1251,
+            "PIB Fact Check": 1251,
+            "Factly": 1251,
+            "AFP Fact Check India": 1251,
+            "BOOM Live": 1251
+        }
+    },
+    "text_statistics": {
+        "average_character_length": 1785.96,
+        "average_word_length": 288.68,
+        "longest_article": {
+            "id": "master_37788",
+            "character_length": 51793,
+            "word_length": 8135,
+            "title": "MEDIA TRIPWIRE? Ping Pong Pizza Conspiracy Propels Internet Censorship Amid ‘Fake News’ Witch-Hunt"
+        },
+        "shortest_article": {
+            "id": "master_32640",
+            "character_length": 5,
+            "word_length": 1,
+            "title": "OUCH! Paul Joseph Watson DESTROYS MTV’s Racist Propaganda Video: “Beyonce Cares So Much About ‘Black"
+        }
+    },
+    "missing_values": {
+        "id": {
+            "count": 0,
+            "percentage": 0.0
+        },
+        "title": {
+            "count": 0,
+            "percentage": 0.0
+        },
+        "text": {
+            "count": 0,
+            "percentage": 0.0
+        },
+        "label": {
+            "count": 0,
+            "percentage": 0.0
+        },
+        "source": {
+            "count": 38184,
+            "percentage": 67.4081
+        },
+        "category": {
+            "count": 0,
+            "percentage": 0.0
+        },
+        "author": {
+            "count": 40901,
+            "percentage": 72.2046
+        },
+        "published_date": {
+            "count": 0,
+            "percentage": 0.0
+        },
+        "language": {
+            "count": 0,
+            "percentage": 0.0
+        },
+        "url": {
+            "count": 56646,
+            "percentage": 100.0
+        },
+        "dataset_origin": {
+            "count": 0,
+            "percentage": 0.0
+        }
+    }
+}

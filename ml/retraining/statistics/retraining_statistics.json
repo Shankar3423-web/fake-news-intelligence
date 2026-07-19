@@ -1,0 +1,57 @@
+{
+    "run_id": "retrain_20260719_183430_f54e5499",
+    "generated_at": "2026-07-19T13:05:29Z",
+    "dataset": {
+        "approved_records_merged": 5,
+        "pre_merge_rows": 56573,
+        "post_merge_rows": 56578,
+        "delta_rows": 5,
+        "feature_count": 283,
+        "training_split": 45262,
+        "testing_split": 11316
+    },
+    "training": {
+        "total_models_trained": 4,
+        "per_model_duration_sec": {
+            "logistic_regression": 38.6045,
+            "svm": 1.8626,
+            "random_forest": 7.0741,
+            "xgboost": 3.1402
+        },
+        "average_training_time_sec": 12.6704
+    },
+    "evaluation": {
+        "candidate_metrics": {
+            "accuracy": 0.998321,
+            "precision": 0.99945,
+            "recall": 0.997072,
+            "f1_score": 0.998259,
+            "roc_auc": 0.999906,
+            "balanced_accuracy": 0.99828,
+            "mcc": 0.99664,
+            "inference_time_sec": 0.03124,
+            "prediction_time_sec": 0.03124,
+            "memory_used_mb": 0.0,
+            "model_size_bytes": 226444,
+            "model_size_mb": 0.216
+        },
+        "production_metrics_at_comparison": {
+            "accuracy": 0.998321,
+            "precision": 0.99945,
+            "recall": 0.997072,
+            "f1_score": 0.998259,
+            "roc_auc": 0.999906,
+            "balanced_accuracy": 0.99828,
+            "mcc": 0.99664,
+            "inference_time_sec": 0.03009,
+            "prediction_time_sec": 0.03009,
+            "memory_used_mb": 0.0,
+            "model_size_bytes": 226444,
+            "model_size_mb": 0.216
+        }
+    },
+    "pipeline": {
+        "total_duration_sec": 59.6467,
+        "decision": "REJECTED"
+    }
+}

@@ -1,0 +1,62 @@
+{
+  "timestamp": 1784450477.6758144,
+  "provider": "newsdata",
+  "query": "SpaceX Super Heavy Starship Thursday booster landing",
+  "response": [
+    {
+      "title": "Elon Musk loses $45 billion as SpaceX shares tumble after Starship launch setback",
+      "description": "Elon Musk's net worth dropped below $800 billion after SpaceX shares fell to another all-time low on Friday, wiping out $45.3 billion... The post Elon Musk loses $45 billion as SpaceX shares tumble after Starship launch setback appeared first on Nairametrics .",
+      "content": "ONLY AVAILABLE IN PAID PLANS",
+      "url": "https://nairametrics.com/2026/07/18/elon-musk-loses-45-billion-as-spacex-shares-tumble-after-starship-launch-setback/",
+      "source": "nairametrics",
+      "author": "samuel daniel",
+      "published_date": "2026-07-18 16:15:59",
+      "language": "english",
+      "provider": "newsdata"
+    },
+    {
+      "title": "SpaceXâs Starship launch aborted moments before blastoff (VIDEO)",
+      "description": "",
+      "content": "ONLY AVAILABLE IN PAID PLANS",
+      "url": "https://www.bundle.app/en/breaking-news/spacexs-starship-launch-aborted-moments-before-blastoff-video-117A86CF-ACD5-4B65-B3A0-68344EC543E6",
+      "source": "bundle_app",
+      "author": "rt.com",
+      "published_date": "2026-07-17 21:07:36",
+      "language": "english",
+      "provider": "newsdata"
+    },
+    {
+      "title": "SpaceX Starship launch scrubbed moments before blastoff",
+      "description": "The test flight was aborted after some of the rockets engines failed to start, Elon Musk has said The 13th test flight of SpaceX's Starship ended abruptly after an engine malfunction forced an automatic launch abort seconds before liftoff on Thursday. Alive streamfrom the Starbase launch site in Texas showed clouds of smoke and vapor billowing from the rocket as its engines ignited. However",
+      "content": "ONLY AVAILABLE IN PAID PLANS",
+      "url": "http://www.russiaherald.com/news/279194693/spacex-starship-launch-scrubbed-moments-before-blastoff",
+      "source": "russiaherald",
+      "author": "Unknown",
+      "published_date": "2026-07-17 21:07:36",
+      "language": "english",
+      "provider": "newsdata"
+    },
+    {
+      "title": "SpaceX Starship launch scrubbed moments before blastoff",
+      "description": "The test flight was aborted after some of the rockets engines failed to start, Elon Musk has said The 13th test flight of SpaceX's Starship ended abruptly after an engine malfunction forced an automatic launch abort seconds before liftoff on Thursday. Alive streamfrom the Starbase launch site in Texas showed clouds of smoke and vapor billowing from the rocket as its engines ignited. However",
+      "content": "ONLY AVAILABLE IN PAID PLANS",
+      "url": "http://www.austinglobe.com/news/279194693/spacex-starship-launch-scrubbed-moments-before-blastoff",
+      "source": "austinglobe",
+      "author": "Unknown",
+      "published_date": "2026-07-17 21:07:36",
+      "language": "english",
+      "provider": "newsdata"
+    },
+    {
+      "title": "SpaceX Starship launch scrubbed moments before blastoff (VIDEO)",
+      "description": "A ‌test flight of SpaceX’s Starship has been aborted seconds before liftoff after several of the rocket’s engines failed to start Read Full Article at RT.com",
+      "content": "ONLY AVAILABLE IN PAID PLANS",
+      "url": "https://www.rt.com/news/643179-spacex-starship-launch-aborted/",
+      "source": "rt",
+      "author": "rt",
+      "published_date": "2026-07-17 21:07:36",
+      "language": "english",
+      "provider": "newsdata"
+    }
+  ]
+}

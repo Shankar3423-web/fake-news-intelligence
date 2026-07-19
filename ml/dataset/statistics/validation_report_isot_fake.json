@@ -1,0 +1,16 @@
+{
+    "dataset_label": "isot_fake",
+    "schema_type": "ISOT",
+    "is_valid": true,
+    "shape": [
+        22841,
+        11
+    ],
+    "errors": [],
+    "warnings": [],
+    "metrics": {
+        "labels": [
+            1
+        ]
+    }
+}

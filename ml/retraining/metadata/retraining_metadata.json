@@ -1,0 +1,33 @@
+{
+    "run_id": "retrain_20260719_183430_f54e5499",
+    "generated_at": "2026-07-19T13:05:29Z",
+    "phase": 12,
+    "description": "Automatic Model Retraining System",
+    "configuration": {
+        "config_path": "ml/retraining/retraining_config.yaml",
+        "approved_feedback_csv": "ml/admin_review/approved/approved_feedback.csv"
+    },
+    "run_summary": {
+        "approved_records_merged": 5,
+        "merged_dataset_rows": 56578,
+        "feature_count": 283,
+        "best_candidate_model": "xgboost",
+        "decision": "REJECTED",
+        "pipeline_duration_sec": 59.6467
+    },
+    "environment": {
+        "python_version": "3.13.9",
+        "os": "Windows-11-10.0.26200-SP0",
+        "machine": "AMD64",
+        "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel"
+    },
+    "library_versions": {
+        "python": "3.13.9",
+        "pandas": "2.2.3",
+        "numpy": "2.2.4",
+        "sklearn": "1.6.1",
+        "xgboost": "3.0.0",
+        "joblib": "1.4.2",
+        "scipy": "1.15.2"
+    }
+}

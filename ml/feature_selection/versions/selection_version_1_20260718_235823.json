@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "timestamp": "2026-07-18T23:58:23.129269",
+    "total_selected_features": 283,
+    "merger_strategy": "voting",
+    "reduction_rate_pct": 94.37,
+    "files": {
+        "selected_feature_dataset_v1.csv": "9f6591cbe59c477e2c4a19304e07d5665c3fd74c4e34f6fe4a8e75f84be3d14b",
+        "selected_feature_names.json": "4aa2a26f573c0b6d671a59403917343939cca7fe443dca7aa0eecae266b4f8f6",
+        "feature_rankings.json": "35757097a1ea1d3470fa461cc36a0d7239fcb35b5d2fb050204d134ceb14f702",
+        "feature_selection_summary.json": "b9ec81341045ade04e63187e0b7ee51dcbd6c98145d6f05a54ef55a53290228c",
+        "selection_statistics.json": "0d1c694a3b68b192041c9fa048c32d6938c10db393e738b6bac0dc4c372d3c50",
+        "selection_profile.json": "95ae518673f6590c5eed9dc8f9dd45ba9a0de43bc3a37607e47197f54fc53b9b"
+    }
+}

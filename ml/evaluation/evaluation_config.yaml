@@ -1,0 +1,65 @@
+# ====================================================================================================
+# PHASE 7: MODEL EVALUATION CONFIGURATION
+# Production-Grade Fake News Intelligence System
+# ====================================================================================================
+
+# Global random state for reproducibility (must match Phase 6 for same test split)
+random_state: 42
+
+# Dataset splitting parameters (must match Phase 6 to get exact same test split)
+split:
+  test_size: 0.2
+  stratify: true
+  shuffle: true
+
+# Input file paths
+inputs:
+  dataset_csv: "ml/feature_selection/processed/selected_feature_dataset_v1.csv"
+  feature_names_json: "ml/feature_selection/processed/selected_feature_names.json"
+  training_registry_json: "ml/training/registry.json"
+  training_versions_json: "ml/training/versions/training_versions.json"
+
+# Output directories and files
+outputs:
+  reports_dir: "ml/evaluation/reports"
+  statistics_dir: "ml/evaluation/statistics"
+  metadata_dir: "ml/evaluation/metadata"
+  hashes_dir: "ml/evaluation/hashes"
+  versions_dir: "ml/evaluation/versions"
+  leaderboard_dir: "ml/evaluation/leaderboard"
+  comparison_dir: "ml/evaluation/comparison"
+  logs_dir: "ml/evaluation/logs"
+  predictions_dir: "ml/evaluation/predictions"
+  classification_reports_dir: "ml/evaluation/classification_reports"
+  confusion_matrices_dir: "ml/evaluation/confusion_matrices"
+  roc_curves_dir: "ml/evaluation/roc_curves"
+  precision_recall_curves_dir: "ml/evaluation/precision_recall_curves"
+  charts_dir: "ml/evaluation/charts"
+  
+  evaluation_report_file: "ml/evaluation/reports/evaluation_report.md"
+  evaluation_statistics_file: "ml/evaluation/statistics/evaluation_statistics.json"
+  leaderboard_csv_file: "ml/evaluation/leaderboard/leaderboard.csv"
+  leaderboard_json_file: "ml/evaluation/leaderboard/leaderboard.json"
+  leaderboard_md_file: "ml/evaluation/leaderboard/leaderboard.md"
+  comparison_csv_file: "ml/evaluation/comparison/model_comparison.csv"
+  comparison_json_file: "ml/evaluation/comparison/model_comparison.json"
+  comparison_md_file: "ml/evaluation/comparison/model_comparison.md"
+  best_model_file: "ml/evaluation/best_model.json"
+  versions_file: "ml/evaluation/versions/evaluation_versions.json"
+  hashes_file: "ml/evaluation/hashes/evaluation_hashes.json"
+
+# Visualization options
+visualizations:
+  enable_charts: true
+  enable_roc: true
+  enable_pr_curve: true
+
+# Configurable best model selection
+best_model_selection:
+  selection_metric: "weighted_score"  # weighted_score or a single metric (f1_score, accuracy, precision, recall, roc_auc, mcc)
+  weights:
+    f1_score: 0.40
+    roc_auc: 0.30
+    precision: 0.15
+    recall: 0.10
+    prediction_speed: 0.05

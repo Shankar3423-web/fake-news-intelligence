@@ -1,0 +1,140 @@
+{
+    "current_production": {
+        "model_key": "xgboost",
+        "promoted_at": "2026-07-19T05:46:47Z",
+        "run_id": "retrain_20260719_111622_b6b226d1",
+        "metrics": {
+            "accuracy": 0.998321,
+            "precision": 0.99945,
+            "recall": 0.997072,
+            "f1_score": 0.998259,
+            "roc_auc": 0.999906,
+            "balanced_accuracy": 0.99828,
+            "mcc": 0.99664,
+            "inference_time_sec": 0.03009,
+            "prediction_time_sec": 0.03009,
+            "memory_used_mb": 0.0,
+            "model_size_bytes": 226444,
+            "model_size_mb": 0.216
+        }
+    },
+    "retraining_runs": [
+        {
+            "run_id": "retrain_20260719_111622_b6b226d1",
+            "timestamp": "2026-07-19T05:46:47Z",
+            "decision": "PROMOTED",
+            "promoted": true,
+            "reason": "Candidate promoted: weighted_score 0.9986 > production 0.9956 (required delta: 0.0).",
+            "candidate_model_key": "xgboost",
+            "approved_records_used": 5,
+            "merged_dataset_rows": 56578,
+            "candidate_metrics": {
+                "accuracy": 0.998321,
+                "precision": 0.99945,
+                "recall": 0.997072,
+                "f1_score": 0.998259,
+                "roc_auc": 0.999906,
+                "balanced_accuracy": 0.99828,
+                "mcc": 0.99664,
+                "inference_time_sec": 0.03009,
+                "prediction_time_sec": 0.03009,
+                "memory_used_mb": 0.0,
+                "model_size_bytes": 226444,
+                "model_size_mb": 0.216
+            },
+            "production_metrics_at_comparison": {
+                "accuracy": 0.994697,
+                "precision": 0.995053,
+                "recall": 0.99396,
+                "f1_score": 0.994507,
+                "roc_auc": 0.999687,
+                "balanced_accuracy": 0.994673,
+                "mcc": 0.989382,
+                "cohen_kappa": 0.989382,
+                "log_loss": null,
+                "prediction_time_sec": 0.0131,
+                "inference_throughput_sps": 863233.06,
+                "inference_latency_ms": 0.001158,
+                "memory_used_mb": 0.0,
+                "model_size_bytes": 9547,
+                "model_size_mb": 0.0091
+            }
+        },
+        {
+            "run_id": "retrain_20260719_111651_fa1d929a",
+            "timestamp": "2026-07-19T05:47:11Z",
+            "decision": "REJECTED",
+            "promoted": false,
+            "reason": "Candidate rejected: weighted_score 0.9986 \u2264 production 0.9986 \u2014 production model retained.",
+            "candidate_model_key": "xgboost",
+            "approved_records_used": 5,
+            "merged_dataset_rows": 56578,
+            "candidate_metrics": {
+                "accuracy": 0.998321,
+                "precision": 0.99945,
+                "recall": 0.997072,
+                "f1_score": 0.998259,
+                "roc_auc": 0.999906,
+                "balanced_accuracy": 0.99828,
+                "mcc": 0.99664,
+                "inference_time_sec": 0.026246,
+                "prediction_time_sec": 0.026246,
+                "memory_used_mb": 0.0,
+                "model_size_bytes": 226444,
+                "model_size_mb": 0.216
+            },
+            "production_metrics_at_comparison": {
+                "accuracy": 0.998321,
+                "precision": 0.99945,
+                "recall": 0.997072,
+                "f1_score": 0.998259,
+                "roc_auc": 0.999906,
+                "balanced_accuracy": 0.99828,
+                "mcc": 0.99664,
+                "inference_time_sec": 0.03009,
+                "prediction_time_sec": 0.03009,
+                "memory_used_mb": 0.0,
+                "model_size_bytes": 226444,
+                "model_size_mb": 0.216
+            }
+        },
+        {
+            "run_id": "retrain_20260719_183430_f54e5499",
+            "timestamp": "2026-07-19T13:05:29Z",
+            "decision": "REJECTED",
+            "promoted": false,
+            "reason": "Candidate rejected: weighted_score 0.9986 \u2264 production 0.9986 \u2014 production model retained.",
+            "candidate_model_key": "xgboost",
+            "approved_records_used": 5,
+            "merged_dataset_rows": 56578,
+            "candidate_metrics": {
+                "accuracy": 0.998321,
+                "precision": 0.99945,
+                "recall": 0.997072,
+                "f1_score": 0.998259,
+                "roc_auc": 0.999906,
+                "balanced_accuracy": 0.99828,
+                "mcc": 0.99664,
+                "inference_time_sec": 0.03124,
+                "prediction_time_sec": 0.03124,
+                "memory_used_mb": 0.0,
+                "model_size_bytes": 226444,
+                "model_size_mb": 0.216
+            },
+            "production_metrics_at_comparison": {
+                "accuracy": 0.998321,
+                "precision": 0.99945,
+                "recall": 0.997072,
+                "f1_score": 0.998259,
+                "roc_auc": 0.999906,
+                "balanced_accuracy": 0.99828,
+                "mcc": 0.99664,
+                "inference_time_sec": 0.03009,
+                "prediction_time_sec": 0.03009,
+                "memory_used_mb": 0.0,
+                "model_size_bytes": 226444,
+                "model_size_mb": 0.216
+            }
+        }
+    ]
+}

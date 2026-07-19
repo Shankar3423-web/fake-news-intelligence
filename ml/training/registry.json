@@ -1,0 +1,181 @@
+{
+    "latest_model_id": "model_xgboost_20260719_085858",
+    "models": [
+        {
+            "id": "model_logistic_regression_20260719_084526",
+            "algorithm": "Logistic Regression",
+            "version": "training_v1",
+            "dataset_version": "1.0.1",
+            "training_date": "2026-07-19T03:15:11.612567",
+            "feature_count": 283,
+            "training_samples": 45258,
+            "testing_samples": 11315,
+            "path": "ml/training/models\\logistic_regression"
+        },
+        {
+            "id": "model_svm_20260719_084528",
+            "algorithm": "Linear SVM",
+            "version": "training_v1",
+            "dataset_version": "1.0.1",
+            "training_date": "2026-07-19T03:15:11.612567",
+            "feature_count": 283,
+            "training_samples": 45258,
+            "testing_samples": 11315,
+            "path": "ml/training/models\\linear_svm"
+        },
+        {
+            "id": "model_random_forest_20260719_084531",
+            "algorithm": "Random Forest",
+            "version": "training_v1",
+            "dataset_version": "1.0.1",
+            "training_date": "2026-07-19T03:15:11.612567",
+            "feature_count": 283,
+            "training_samples": 45258,
+            "testing_samples": 11315,
+            "path": "ml/training/models\\random_forest"
+        },
+        {
+            "id": "model_xgboost_20260719_084534",
+            "algorithm": "XGBoost",
+            "version": "training_v1",
+            "dataset_version": "1.0.1",
+            "training_date": "2026-07-19T03:15:11.612567",
+            "feature_count": 283,
+            "training_samples": 45258,
+            "testing_samples": 11315,
+            "path": "ml/training/models\\xgboost"
+        },
+        {
+            "id": "model_logistic_regression_20260719_084810",
+            "algorithm": "Logistic Regression",
+            "version": "training_v1",
+            "dataset_version": "1.0.1",
+            "training_date": "2026-07-19T03:17:55.813763",
+            "feature_count": 283,
+            "training_samples": 45258,
+            "testing_samples": 11315,
+            "path": "ml/training/models\\logistic_regression"
+        },
+        {
+            "id": "model_svm_20260719_084813",
+            "algorithm": "Linear SVM",
+            "version": "training_v1",
+            "dataset_version": "1.0.1",
+            "training_date": "2026-07-19T03:17:55.813763",
+            "feature_count": 283,
+            "training_samples": 45258,
+            "testing_samples": 11315,
+            "path": "ml/training/models\\linear_svm"
+        },
+        {
+            "id": "model_random_forest_20260719_084815",
+            "algorithm": "Random Forest",
+            "version": "training_v1",
+            "dataset_version": "1.0.1",
+            "training_date": "2026-07-19T03:17:55.813763",
+            "feature_count": 283,
+            "training_samples": 45258,
+            "testing_samples": 11315,
+            "path": "ml/training/models\\random_forest"
+        },
+        {
+            "id": "model_xgboost_20260719_084817",
+            "algorithm": "XGBoost",
+            "version": "training_v1",
+            "dataset_version": "1.0.1",
+            "training_date": "2026-07-19T03:17:55.813763",
+            "feature_count": 283,
+            "training_samples": 45258,
+            "testing_samples": 11315,
+            "path": "ml/training/models\\xgboost"
+        },
+        {
+            "id": "model_logistic_regression_20260719_085052",
+            "algorithm": "Logistic Regression",
+            "version": "training_v1",
+            "dataset_version": "1.0.1",
+            "training_date": "2026-07-19T03:20:36.097001",
+            "feature_count": 283,
+            "training_samples": 45258,
+            "testing_samples": 11315,
+            "path": "ml/training/models\\logistic_regression"
+        },
+        {
+            "id": "model_svm_20260719_085054",
+            "algorithm": "Linear SVM",
+            "version": "training_v1",
+            "dataset_version": "1.0.1",
+            "training_date": "2026-07-19T03:20:36.097001",
+            "feature_count": 283,
+            "training_samples": 45258,
+            "testing_samples": 11315,
+            "path": "ml/training/models\\linear_svm"
+        },
+        {
+            "id": "model_random_forest_20260719_085057",
+            "algorithm": "Random Forest",
+            "version": "training_v1",
+            "dataset_version": "1.0.1",
+            "training_date": "2026-07-19T03:20:36.097001",
+            "feature_count": 283,
+            "training_samples": 45258,
+            "testing_samples": 11315,
+            "path": "ml/training/models\\random_forest"
+        },
+        {
+            "id": "model_xgboost_20260719_085100",
+            "algorithm": "XGBoost",
+            "version": "training_v1",
+            "dataset_version": "1.0.1",
+            "training_date": "2026-07-19T03:20:36.097001",
+            "feature_count": 283,
+            "training_samples": 45258,
+            "testing_samples": 11315,
+            "path": "ml/training/models\\xgboost"
+        },
+        {
+            "id": "model_logistic_regression_20260719_085851",
+            "algorithm": "Logistic Regression",
+            "version": "training_v2",
+            "dataset_version": "1.0.1",
+            "training_date": "2026-07-19T03:28:36.931762+00:00",
+            "feature_count": 283,
+            "training_samples": 45258,
+            "testing_samples": 11315,
+            "path": "ml/training/models\\logistic_regression"
+        },
+        {
+            "id": "model_svm_20260719_085854",
+            "algorithm": "Linear SVM",
+            "version": "training_v2",
+            "dataset_version": "1.0.1",
+            "training_date": "2026-07-19T03:28:36.931762+00:00",
+            "feature_count": 283,
+            "training_samples": 45258,
+            "testing_samples": 11315,
+            "path": "ml/training/models\\linear_svm"
+        },
+        {
+            "id": "model_random_forest_20260719_085856",
+            "algorithm": "Random Forest",
+            "version": "training_v2",
+            "dataset_version": "1.0.1",
+            "training_date": "2026-07-19T03:28:36.931762+00:00",
+            "feature_count": 283,
+            "training_samples": 45258,
+            "testing_samples": 11315,
+            "path": "ml/training/models\\random_forest"
+        },
+        {
+            "id": "model_xgboost_20260719_085858",
+            "algorithm": "XGBoost",
+            "version": "training_v2",
+            "dataset_version": "1.0.1",
+            "training_date": "2026-07-19T03:28:36.931762+00:00",
+            "feature_count": 283,
+            "training_samples": 45258,
+            "testing_samples": 11315,
+            "path": "ml/training/models\\xgboost"
+        }
+    ]
+}

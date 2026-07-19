@@ -1,0 +1,62 @@
+{
+  "timestamp": 1784450474.3724988,
+  "provider": "newsapi",
+  "query": "SpaceX Super Heavy Starship Thursday booster landing",
+  "response": [
+    {
+      "title": "SpaceX clears Starship mishap probe before next test flight this week",
+      "description": "By Joey Roulette WASHINGTON, July 13 (Reuters) - The U.S.",
+      "content": "By Joey Roulette\r\nWASHINGTON, July 13 (Reuters) - The U.S. Federal Aviation Administration on Monday closed its review into a SpaceX Starship booster's return failure that occurred during a flight te… [+2862 chars]",
+      "url": "https://www.yahoo.com/news/science/articles/faa-closes-starship-review-ahead-135045621.html",
+      "source": "Yahoo Entertainment",
+      "author": "By Joey Roulette",
+      "published_date": "2026-07-13T16:53:40Z",
+      "language": "en",
+      "provider": "newsapi"
+    },
+    {
+      "title": "How to Watch Starship Flight 13, the Second Launch Attempt of the World’s Biggest Rocket",
+      "description": "This time, SpaceX will try to correct some issues that occurred during the first flight and launch a batch of next-generation Starlink satellites.",
+      "content": "In May, SpaceX launched the biggest, most powerful rocket ever built for the first time. Now, Starship V3 is heading back to the pad for its second test flight, and it could blast off as soon as Thur… [+3875 chars]",
+      "url": "https://gizmodo.com/how-to-watch-starship-flight-13-the-second-launch-attempt-of-the-worlds-biggest-rocket-2000785953",
+      "source": "Gizmodo.com",
+      "author": "Ellyn Lapointe",
+      "published_date": "2026-07-15T21:00:53Z",
+      "language": "en",
+      "provider": "newsapi"
+    },
+    {
+      "title": "Watch SpaceX’s Starship flight 13 launch tonight",
+      "description": "SpaceX is launching the latest version of its Starship megarocket for a test flight that—if all goes to plan—should look a lot like the last one",
+      "content": "SpaceX is gearing up to launch its Starship megarocket. On Thursday, no earlier than 6:45 P.M. EDT, Elon Musk’s space company will attempt a thirteenth flight test of Starship that will see the rocke… [+3790 chars]",
+      "url": "https://www.scientificamerican.com/article/watch-spacexs-starship-flight-13-launch-tonight/",
+      "source": "Scientific American",
+      "author": "Claire Cameron",
+      "published_date": "2026-07-16T10:00:00Z",
+      "language": "en",
+      "provider": "newsapi"
+    },
+    {
+      "title": "Elon Musk’s Net Worth Drops Below $800 Billion After Starship Launch Aborted",
+      "description": "Another attempt will come “hopefully in a few days,” Musk said.",
+      "content": "A setback in Starships latest launch attempt lowered SpaceX shares to another all-time low on Friday, extending a losing streak for the stock and lowering Elon Musks net worth by more than $45 billio… [+2887 chars]",
+      "url": "https://www.forbes.com/sites/tylerroush/2026/07/17/elon-musks-net-worth-drops-below-800-billion-after-starship-launch-aborted/",
+      "source": "Forbes",
+      "author": "Ty Roush, Forbes Staff, \n Ty Roush, Forbes Staff\n https://www.forbes.com/sites/tylerroush/",
+      "published_date": "2026-07-17T14:12:20Z",
+      "language": "en",
+      "provider": "newsapi"
+    },
+    {
+      "title": "SpaceX Starship launch scrubbed moments before blastoff (VIDEO)",
+      "description": "A ‌test flight of SpaceX’s Starship has been aborted seconds before liftoff after several of the rocket’s engines failed to start Read Full Article at RT.com",
+      "content": "The 13th test flight of SpaceX’s Starship ended abruptly after an engine malfunction forced an automatic launch abort seconds before liftoff on Thursday.\r\nA live stream from the Starbase launch site … [+1757 chars]",
+      "url": "https://www.rt.com/news/643179-spacex-starship-launch-aborted/",
+      "source": "RT",
+      "author": "RT",
+      "published_date": "2026-07-17T21:07:36Z",
+      "language": "en",
+      "provider": "newsapi"
+    }
+  ]
+}

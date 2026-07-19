@@ -1,0 +1,18 @@
+{
+    "dataset_label": "india_fake",
+    "schema_type": "INDIA",
+    "is_valid": true,
+    "shape": [
+        10005,
+        11
+    ],
+    "errors": [],
+    "warnings": [
+        "Schema column 'url' is entirely null/empty."
+    ],
+    "metrics": {
+        "labels": [
+            1
+        ]
+    }
+}

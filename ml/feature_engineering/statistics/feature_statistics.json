@@ -1,0 +1,209 @@
+{
+    "total_records": 56573,
+    "execution_time_seconds": 1776.67,
+    "feature_metrics": {
+        "stat_word_count": {
+            "mean": 289.0518,
+            "std": 303.6459,
+            "min": 2.0,
+            "max": 8135.0,
+            "null_count": 0
+        },
+        "stat_char_count": {
+            "mean": 1788.2211,
+            "std": 1843.4177,
+            "min": 12.0,
+            "max": 51793.0,
+            "null_count": 0
+        },
+        "stat_sentence_count": {
+            "mean": 14.1755,
+            "std": 14.5857,
+            "min": 1.0,
+            "max": 323.0,
+            "null_count": 0
+        },
+        "stat_avg_word_length": {
+            "mean": 5.6271,
+            "std": 0.9031,
+            "min": 2.8,
+            "max": 22.9659,
+            "null_count": 0
+        },
+        "stat_avg_sentence_length": {
+            "mean": 20.2456,
+            "std": 4.7245,
+            "min": 2.0,
+            "max": 116.75,
+            "null_count": 0
+        },
+        "stat_vocabulary_size": {
+            "mean": 169.9828,
+            "std": 139.6763,
+            "min": 2.0,
+            "max": 2826.0,
+            "null_count": 0
+        },
+        "read_flesch_reading_ease": {
+            "mean": 34.6346,
+            "std": 21.827,
+            "min": -144.2905,
+            "max": 120.205,
+            "null_count": 0
+        },
+        "read_flesch_kincaid_grade": {
+            "mean": 13.426,
+            "std": 3.1217,
+            "min": -3.01,
+            "max": 50.7631,
+            "null_count": 0
+        },
+        "read_smog": {
+            "mean": 14.7066,
+            "std": 2.2549,
+            "min": 3.1291,
+            "max": 32.5373,
+            "null_count": 0
+        },
+        "read_gunning_fog": {
+            "mean": 16.345,
+            "std": 3.8471,
+            "min": 0.8,
+            "max": 55.1797,
+            "null_count": 0
+        },
+        "read_coleman_liau": {
+            "mean": 14.566,
+            "std": 5.0546,
+            "min": -5.48,
+            "max": 81.7059,
+            "null_count": 0
+        },
+        "lex_diversity": {
+            "mean": 0.7067,
+            "std": 0.1883,
+            "min": 0.1498,
+            "max": 1.0,
+            "null_count": 0
+        },
+        "lex_unique_words": {
+            "mean": 160.948,
+            "std": 128.3406,
+            "min": 2.0,
+            "max": 2512.0,
+            "null_count": 0
+        },
+        "lex_stopword_ratio": {
+            "mean": 0.3583,
+            "std": 0.0942,
+            "min": 0.0,
+            "max": 0.7826,
+            "null_count": 0
+        },
+        "lex_long_word_ratio": {
+            "mean": 0.4461,
+            "std": 0.1332,
+            "min": 0.0,
+            "max": 1.0,
+            "null_count": 0
+        },
+        "lex_short_word_ratio": {
+            "mean": 0.3173,
+            "std": 0.0874,
+            "min": 0.0,
+            "max": 0.75,
+            "null_count": 0
+        },
+        "sym_digit_count": {
+            "mean": 13.9031,
+            "std": 21.0662,
+            "min": 0.0,
+            "max": 1396.0,
+            "null_count": 0
+        },
+        "sym_uppercase_count": {
+            "mean": 69.2673,
+            "std": 73.1328,
+            "min": 1.0,
+            "max": 2818.0,
+            "null_count": 0
+        },
+        "sym_punctuation_count": {
+            "mean": 39.7323,
+            "std": 52.555,
+            "min": 0.0,
+            "max": 7295.0,
+            "null_count": 0
+        },
+        "sym_special_char_count": {
+            "mean": 3.3347,
+            "std": 8.9447,
+            "min": 0.0,
+            "max": 247.0,
+            "null_count": 0
+        },
+        "ling_entity_count": {
+            "mean": 31.0668,
+            "std": 35.3813,
+            "min": 0.0,
+            "max": 804.0,
+            "null_count": 0
+        },
+        "ling_noun_count": {
+            "mean": 99.8425,
+            "std": 103.0748,
+            "min": 0.0,
+            "max": 3030.0,
+            "null_count": 0
+        },
+        "ling_verb_count": {
+            "mean": 53.0547,
+            "std": 56.4301,
+            "min": 0.0,
+            "max": 1341.0,
+            "null_count": 0
+        },
+        "ling_adj_count": {
+            "mean": 22.3194,
+            "std": 23.8243,
+            "min": 0.0,
+            "max": 826.0,
+            "null_count": 0
+        },
+        "ling_pos_noun_ratio": {
+            "mean": 0.318,
+            "std": 0.0546,
+            "min": 0.0,
+            "max": 0.8889,
+            "null_count": 0
+        },
+        "ling_pos_verb_ratio": {
+            "mean": 0.1479,
+            "std": 0.0303,
+            "min": 0.0,
+            "max": 0.4286,
+            "null_count": 0
+        },
+        "ling_pos_adj_ratio": {
+            "mean": 0.0817,
+            "std": 0.0406,
+            "min": 0.0,
+            "max": 0.5,
+            "null_count": 0
+        },
+        "ling_pos_adv_ratio": {
+            "mean": 0.0357,
+            "std": 0.0278,
+            "min": 0.0,
+            "max": 0.2222,
+            "null_count": 0
+        },
+        "ling_pos_pron_ratio": {
+            "mean": 0.0378,
+            "std": 0.0298,
+            "min": 0.0,
+            "max": 0.3077,
+            "null_count": 0
+        }
+    }
+}

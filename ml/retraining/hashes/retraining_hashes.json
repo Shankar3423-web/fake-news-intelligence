@@ -1,0 +1,13 @@
+{
+    "files": {
+        "deployment_decision": "c41b30aaf52284db8aa0f2b2437fbabc7fec51575c8cabc41a33aaf295156cd9",
+        "registry": "27e5e76e6efe6a2a5c70e9cc9c46b68c98027322ac8b3b3234d47bbd31992a43",
+        "retraining_statistics": "20bad343588e99dbb4d1f2f00633be6a85eb9e069a0e481fcdb3e056b739cefa",
+        "retraining_metadata": "8d8b9711914cfbd66c829978ab65fa5996161b001f22084447ee313bfba9e253",
+        "retraining_report": "af7f53e0a854366a258a755e94c7b64c9306caa6aa6c3b99b4370d5882930629",
+        "comparison_report": "77c97b1c636506266fb5bd9f1a26d8fb327bc1625915ebf1281d72505856ad40",
+        "chart_metrics_comparison": "63044868ecc86f4d900b12a8fd04763b659f0238e8d96df116fd1405bfb96f06",
+        "chart_training_duration": "625e8fcace0f93dfe189af353525e38b69d2df3faab17991a10db33987b846b5",
+        "chart_label_distribution": "65d0c432bbe06d64154af36fceb892c1ef649f683bde28c1ace47c206f5bf862"
+    }
+}

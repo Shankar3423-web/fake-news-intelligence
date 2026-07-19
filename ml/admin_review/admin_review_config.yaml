@@ -1,0 +1,38 @@
+# Configuration for Phase 11 Admin Review System
+admin_review:
+  allowed_review_states:
+    - "APPROVED"
+    - "REJECTED"
+    - "PENDING"
+  system_version: "1.0.0"
+
+exports:
+  enable_charts: true
+  enable_reports: true
+  enable_metadata: true
+  enable_statistics: true
+  enable_versioning: true
+  enable_hash_generation: true
+
+paths:
+  output_dir: "ml/admin_review"
+  logs_dir: "ml/admin_review/logs"
+  reports_dir: "ml/admin_review/reports"
+  statistics_dir: "ml/admin_review/statistics"
+  metadata_dir: "ml/admin_review/metadata"
+  history_dir: "ml/admin_review/history"
+  approved_dir: "ml/admin_review/approved"
+  hashes_dir: "ml/admin_review/hashes"
+  versions_dir: "ml/admin_review/versions"
+  charts_dir: "ml/admin_review/charts"
+  
+  # File paths
+  feedback_history_csv: "ml/feedback/history/feedback_history.csv"
+  admin_review_history_csv: "ml/admin_review/history/admin_review_history.csv"
+  approved_feedback_csv: "ml/admin_review/approved/approved_feedback.csv"
+  admin_review_statistics_json: "ml/admin_review/statistics/admin_review_statistics.json"
+  admin_review_metadata_json: "ml/admin_review/metadata/admin_review_metadata.json"
+  admin_review_report_md: "ml/admin_review/reports/admin_review_report.md"
+  admin_review_hashes_json: "ml/admin_review/hashes/admin_review_hashes.json"
+  admin_review_versions_json: "ml/admin_review/versions/admin_review_versions.json"
+  admin_review_pipeline_log: "ml/admin_review/logs/admin_review_pipeline.log"

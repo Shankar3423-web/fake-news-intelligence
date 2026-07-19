@@ -1,0 +1,59 @@
+[
+    {
+        "version": 1,
+        "run_id": "retrain_20260719_111622_b6b226d1",
+        "timestamp": "2026-07-19T05:46:49Z",
+        "decision": "PROMOTED",
+        "promoted": true,
+        "file_hashes": {
+            "deployment_decision": "25f2ff9bba8e7a5fcc2ed5a1ab84e5a19880850073f3613c46b96ea3b81f7255",
+            "registry": "c874e4d985245f100ce676d8768a12de5496ca7e4fe454b41ad6e69badaaa690",
+            "retraining_statistics": "e7198fde3bb35d38ed72a4b4ec465a3ad4a039ef82e0b8392db6f78be1c7f8e7",
+            "retraining_metadata": "c864532730d0c0c3dba891085cfab1b4c4f29b2a05fa063f9de970107695daf2",
+            "retraining_report": "dc1ab01374d584b40f63b061a7d3dff0e8753a7290ef2726bf67ba63f7c4f6e1",
+            "comparison_report": "7ea7e374c5de5005ee861431c4f073be59c9bac51638758df83a9f4c47cc35ea",
+            "chart_metrics_comparison": "803ec2d4a771928f0940c128bdbe14e4becb4992f0f3efd74827121b5dabffbb",
+            "chart_training_duration": "c15ea1fac88ed56351296a22862316f68ec4c5ea41e1ccfc7043832f274ffd72",
+            "chart_label_distribution": "65d0c432bbe06d64154af36fceb892c1ef649f683bde28c1ace47c206f5bf862",
+            "retraining_hashes": "c8676f121b30bcef957c422cf9825ca4f0d8eec445b7829c6aa629861603f5fe"
+        }
+    },
+    {
+        "version": 2,
+        "run_id": "retrain_20260719_111651_fa1d929a",
+        "timestamp": "2026-07-19T05:47:11Z",
+        "decision": "REJECTED",
+        "promoted": false,
+        "file_hashes": {
+            "deployment_decision": "ab5bcfcd57a2da42f99a30deb0dd8a0cd85a82f840707d8380b482f13efcb073",
+            "registry": "4e15e66925b1417efc1a595212b63843d51c2f4816cbb30eedbbceda0d4c042c",
+            "retraining_statistics": "805138a9c1044a5d3a10be99b78e8124a96acdf3f41a2f12e1d0b4d76bfcc674",
+            "retraining_metadata": "c11b89d1edbf71fd2639294518da22eb2242a1ddde735f48ea5599acc9c24587",
+            "retraining_report": "ea10ee7fde39634a1373fc630a1f20fddd550cdb45f86b387943587ca4ed38dc",
+            "comparison_report": "a320bd593509d46847c2b1a983a3053a1c677b0a4791098920ee7e74e2b474ca",
+            "chart_metrics_comparison": "63044868ecc86f4d900b12a8fd04763b659f0238e8d96df116fd1405bfb96f06",
+            "chart_training_duration": "e94f3058498cd3f62f8a4a9cc78a768f21dd8cb918ba0897ee5b1dcb7bcbed3e",
+            "chart_label_distribution": "65d0c432bbe06d64154af36fceb892c1ef649f683bde28c1ace47c206f5bf862",
+            "retraining_hashes": "f10f75edc832f0a22ca2491a9311e4b9d340dc150d446c5f361a408dec33ed4a"
+        }
+    },
+    {
+        "version": 3,
+        "run_id": "retrain_20260719_183430_f54e5499",
+        "timestamp": "2026-07-19T13:05:30Z",
+        "decision": "REJECTED",
+        "promoted": false,
+        "file_hashes": {
+            "deployment_decision": "c41b30aaf52284db8aa0f2b2437fbabc7fec51575c8cabc41a33aaf295156cd9",
+            "registry": "27e5e76e6efe6a2a5c70e9cc9c46b68c98027322ac8b3b3234d47bbd31992a43",
+            "retraining_statistics": "20bad343588e99dbb4d1f2f00633be6a85eb9e069a0e481fcdb3e056b739cefa",
+            "retraining_metadata": "8d8b9711914cfbd66c829978ab65fa5996161b001f22084447ee313bfba9e253",
+            "retraining_report": "af7f53e0a854366a258a755e94c7b64c9306caa6aa6c3b99b4370d5882930629",
+            "comparison_report": "77c97b1c636506266fb5bd9f1a26d8fb327bc1625915ebf1281d72505856ad40",
+            "chart_metrics_comparison": "63044868ecc86f4d900b12a8fd04763b659f0238e8d96df116fd1405bfb96f06",
+            "chart_training_duration": "625e8fcace0f93dfe189af353525e38b69d2df3faab17991a10db33987b846b5",
+            "chart_label_distribution": "65d0c432bbe06d64154af36fceb892c1ef649f683bde28c1ace47c206f5bf862",
+            "retraining_hashes": "2a645a278bdaba89372508151ba5556a5b024da4d50c2a6ce94bab97769c3b39"
+        }
+    }
+]

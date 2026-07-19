@@ -1,0 +1,45 @@
+# Configuration for Phase 9 Live News Verification Engine
+verification:
+  timeout: 10
+  retry_count: 3
+  rate_limit_delay: 1.0
+  max_results_per_provider: 5
+  similarity_threshold: 0.25
+  evidence_threshold: 0.2
+  duplicate_threshold: 0.85
+  cache_expiration: 3600
+
+providers:
+  enable_newsapi: true
+  enable_gnews: true
+  enable_newsdata: true
+
+exports:
+  enable_charts: true
+  enable_reports: true
+  enable_metadata: true
+  enable_statistics: true
+  enable_hashing: true
+  enable_versions: true
+  enable_history: true
+
+paths:
+  output_dir: ml/verification
+  logs_dir: ml/verification/logs
+  reports_dir: ml/verification/reports
+  statistics_dir: ml/verification/statistics
+  metadata_dir: ml/verification/metadata
+  hashes_dir: ml/verification/hashes
+  versions_dir: ml/verification/versions
+  cache_dir: ml/verification/cache
+  history_dir: ml/verification/history
+  charts_dir: ml/verification/charts
+  
+  # File paths
+  verification_history_csv: ml/verification/history/verification_history.csv
+  verification_statistics_json: ml/verification/statistics/verification_statistics.json
+  verification_report_md: ml/verification/reports/verification_report.md
+  verification_metadata_json: ml/verification/metadata/verification_metadata.json
+  verification_hashes_json: ml/verification/hashes/verification_hashes.json
+  verification_versions_json: ml/verification/versions/verification_versions.json
+  verification_pipeline_log: ml/verification/logs/verification_pipeline.log

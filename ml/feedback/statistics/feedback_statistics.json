@@ -1,0 +1,14 @@
+{
+  "total_feedback": 13,
+  "correct_count": 7,
+  "incorrect_count": 0,
+  "unsure_count": 0,
+  "average_prediction_confidence": 0.8426,
+  "average_similarity": 0.4427,
+  "average_evidence_score": 0.4828,
+  "feedback_distribution": {
+    "Correct": 0.5385,
+    "Incorrect": 0.0,
+    "Unsure": 0.0
+  }
+}

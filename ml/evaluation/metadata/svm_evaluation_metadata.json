@@ -1,0 +1,26 @@
+{
+    "model_key": "svm",
+    "model_id": "svm",
+    "algorithm": "Linear SVM",
+    "evaluation_date": "2026-07-19T04:06:20Z",
+    "training_version": "run_2_20260719_085859",
+    "dataset_version": "1.0.1",
+    "feature_selection_version": "2",
+    "metrics": {
+        "accuracy": 0.994697,
+        "precision": 0.995053,
+        "recall": 0.99396,
+        "f1_score": 0.994507,
+        "roc_auc": 0.999687,
+        "balanced_accuracy": 0.994673,
+        "mcc": 0.989382,
+        "cohen_kappa": 0.989382,
+        "log_loss": null,
+        "prediction_time_sec": 0.0131,
+        "inference_throughput_sps": 863233.06,
+        "inference_latency_ms": 0.001158,
+        "memory_used_mb": 0.0,
+        "model_size_bytes": 9547,
+        "model_size_mb": 0.0091
+    }
+}

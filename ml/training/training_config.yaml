@@ -1,0 +1,71 @@
+# ====================================================================================================
+# PHASE 6: MODEL TRAINING CONFIGURATION
+# Production-Grade Fake News Intelligence System
+# ====================================================================================================
+
+# Global random state for reproducibility
+random_state: 42
+
+# Dataset splitting parameters
+split:
+  test_size: 0.2
+  stratify: true
+  shuffle: true
+
+# Input file paths (from Phase 5 output)
+inputs:
+  dataset_csv: "ml/feature_selection/processed/selected_feature_dataset_v1.csv"
+  feature_names_json: "ml/feature_selection/processed/selected_feature_names.json"
+  selection_versions_json: "ml/feature_selection/statistics/selection_versions.json"
+
+# Output directories and files
+outputs:
+  models_dir: "ml/training/models"
+  metadata_dir: "ml/training/metadata"
+  reports_dir: "ml/training/reports"
+  statistics_dir: "ml/training/statistics"
+  versions_dir: "ml/training/versions"
+  hashes_dir: "ml/training/hashes"
+  logs_dir: "ml/training/logs"
+  
+  registry_file: "ml/training/registry.json"
+  statistics_file: "ml/training/statistics/training_statistics.json"
+  report_file: "ml/training/reports/training_report.md"
+  versions_file: "ml/training/versions/training_versions.json"
+
+# Model-specific parameters and switches
+models:
+  logistic_regression:
+    enabled: true
+    hyperparameters:
+      solver: "lbfgs"
+      max_iter: 1000
+      C: 1.0
+      random_state: 42
+      
+  svm:
+    enabled: true
+    hyperparameters:
+      C: 1.0
+      max_iter: 2000
+      random_state: 42
+
+  random_forest:
+    enabled: true
+    hyperparameters:
+      n_estimators: 100
+      max_depth: 15
+      random_state: 42
+      n_jobs: -1
+
+  xgboost:
+    enabled: true
+    hyperparameters:
+      n_estimators: 100
+      learning_rate: 0.1
+      max_depth: 6
+      subsample: 0.8
+      colsample_bytree: 0.8
+      objective: "binary:logistic"
+      random_state: 42
+      eval_metric: "logloss" # to suppress warnings

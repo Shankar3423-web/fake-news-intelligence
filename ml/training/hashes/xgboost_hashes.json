@@ -1,0 +1,6 @@
+{
+    "80c640ad21a617dbd11599245d3cbb93ac2d2959e6339cda946383f224bb4c07": "ml/training/models\\xgboost\\model.joblib",
+    "821011089384acae7302079a201e7ce69cc52aa883e96997841d407e909d546f": "ml/training/models\\xgboost\\metadata.json",
+    "e3619c3140d49c5eaaf11bd1ec5136a115b750fa61dfcf4ba87112e5c5f6c1c9": "ml/training/models\\xgboost\\training_config.json",
+    "4aa2a26f573c0b6d671a59403917343939cca7fe443dca7aa0eecae266b4f8f6": "ml/training/models\\xgboost\\feature_order.json"
+}

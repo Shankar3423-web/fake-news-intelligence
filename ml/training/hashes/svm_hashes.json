@@ -1,0 +1,6 @@
+{
+    "a5590503b2f68ab2ae4554ea9a4b1326436b5453c75609633240b61d39f20a13": "ml/training/models\\svm\\model.joblib",
+    "91d18367c19b4525461f0360a662549c1fe4c34d4b843be5d833aee29c173bea": "ml/training/models\\svm\\metadata.json",
+    "f6d06f36ab56679adef57746c13d190a1a64dd0e90b25f4a3158ceb7f5bc3bf1": "ml/training/models\\svm\\training_config.json",
+    "4aa2a26f573c0b6d671a59403917343939cca7fe443dca7aa0eecae266b4f8f6": "ml/training/models\\svm\\feature_order.json"
+}

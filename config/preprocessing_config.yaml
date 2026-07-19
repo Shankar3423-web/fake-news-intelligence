@@ -1,0 +1,70 @@
+# Configuration file for Phase 3: NLP Preprocessing Module Pipeline
+
+# --- Preprocessing Step Enablement (Toggles) ---
+steps:
+  lowercase_conversion: true
+  unicode_normalization: true
+  remove_html_tags: true
+  remove_urls: true
+  remove_emails: true
+  remove_mentions: true
+  process_hashtags: true
+  remove_emojis: true
+  remove_special_characters: true
+  handle_punctuation: true
+  handle_numbers: true
+  whitespace_normalization: true
+  expand_contractions: true
+  language_detection: true
+  tokenization: true
+  stopword_removal: true
+  lemmatization: true
+  short_word_remover: true
+
+# --- Step Specific Parameters ---
+unicode:
+  normalization_form: "NFKC"  # Options: NFC, NFKC, NFD, NFKD
+
+numbers:
+  replacement_token: "<NUM>"
+  preserve_alphanumeric: true
+
+stopwords:
+  language: "english"
+  custom_stopwords: []  # List of additional stopwords to remove
+
+lemmatizer:
+  spacy_model: "en_core_web_sm"
+
+short_words:
+  min_length: 2  # Tokens with length < min_length will be removed
+
+language_detection:
+  supported_languages:
+    - "en"
+  default_language: "en"
+  fallback_on_error: true
+
+# --- Performance & Execution ---
+pipeline:
+  batch_size: 5000  # Number of rows to process in a single batch
+  cpu_cores: 1      # Set higher for multiprocessing if needed (optional)
+
+# --- File Paths (relative to project root) ---
+paths:
+  input_dataset: "ml/dataset/processed/master_dataset_v1.csv"
+  output_dataset: "ml/preprocessing/processed/preprocessed_dataset_v1.csv"
+  
+  # Reports and metadata directories
+  processed_dir: "ml/preprocessing/processed"
+  reports_dir: "ml/preprocessing/reports"
+  statistics_dir: "ml/preprocessing/statistics"
+  logs_dir: "ml/preprocessing/logs"
+  versions_dir: "ml/preprocessing/versions"
+  
+  # Outputs
+  statistics_file: "ml/preprocessing/statistics/preprocessing_statistics.json"
+  profile_file: "ml/preprocessing/statistics/preprocessing_profile.json"
+  quality_report_file: "ml/preprocessing/reports/preprocessing_quality_report.md"
+  versions_file: "ml/preprocessing/statistics/preprocessing_versions.json"
+  hash_file: "ml/preprocessing/statistics/preprocessing_hash.json"

@@ -1,0 +1,18 @@
+{
+  "timestamp": 1784446642.5862749,
+  "provider": "newsdata",
+  "query": "NASA Artemis Florida mission rocket Kennedy",
+  "response": [
+    {
+      "title": "How NASA’s Artemis III Lander Test Will Pave Way for Moon Landings",
+      "description": "Before Artemis astronauts land on the Moon’s surface in 2028, NASA will conduct the Artemis III demonstration mission in 2027, allowing teams on Earth and in orbit to practice rendezvous and docking operations between commercial human landing systems and the Orion spacecraft. Data from that mission, along with future uncrewed demonstration missions at the Moon, [...]",
+      "content": "ONLY AVAILABLE IN PAID PLANS",
+      "url": "https://cerebral-overload.com/2026/07/how-nasas-artemis-iii-lander-test-will-pave-way-for-moon-landings/",
+      "source": "cerebral_overload",
+      "author": "ben",
+      "published_date": "2026-07-17 13:30:00",
+      "language": "english",
+      "provider": "newsdata"
+    }
+  ]
+}

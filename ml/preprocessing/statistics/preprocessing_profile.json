@@ -1,0 +1,424 @@
+{
+    "Top Words": [
+        {
+            "word": "<",
+            "count": 247359
+        },
+        {
+            "word": "NUM",
+            "count": 247359
+        },
+        {
+            "word": ">",
+            "count": 247359
+        },
+        {
+            "word": "said",
+            "count": 120597
+        },
+        {
+            "word": "trump",
+            "count": 108681
+        },
+        {
+            "word": "would",
+            "count": 49308
+        },
+        {
+            "word": "president",
+            "count": 46770
+        },
+        {
+            "word": "people",
+            "count": 35877
+        },
+        {
+            "word": "one",
+            "count": 32063
+        },
+        {
+            "word": "state",
+            "count": 31682
+        },
+        {
+            "word": "reuters",
+            "count": 28387
+        },
+        {
+            "word": "new",
+            "count": 27367
+        },
+        {
+            "word": "also",
+            "count": 26737
+        },
+        {
+            "word": "donald",
+            "count": 25325
+        },
+        {
+            "word": "states",
+            "count": 25281
+        },
+        {
+            "word": "news",
+            "count": 25057
+        },
+        {
+            "word": "government",
+            "count": 24748
+        },
+        {
+            "word": "house",
+            "count": 24256
+        },
+        {
+            "word": "republican",
+            "count": 23394
+        },
+        {
+            "word": "media",
+            "count": 23314
+        },
+        {
+            "word": "year",
+            "count": 21809
+        },
+        {
+            "word": "via",
+            "count": 21808
+        },
+        {
+            "word": "clinton",
+            "count": 21197
+        },
+        {
+            "word": "could",
+            "count": 21093
+        },
+        {
+            "word": "united",
+            "count": 20539
+        },
+        {
+            "word": "obama",
+            "count": 20350
+        },
+        {
+            "word": "told",
+            "count": 20319
+        },
+        {
+            "word": "white",
+            "count": 19423
+        },
+        {
+            "word": "reference",
+            "count": 19236
+        },
+        {
+            "word": "like",
+            "count": 19176
+        },
+        {
+            "word": "election",
+            "count": 18961
+        },
+        {
+            "word": "campaign",
+            "count": 18930
+        },
+        {
+            "word": "two",
+            "count": 18803
+        },
+        {
+            "word": "index",
+            "count": 18714
+        },
+        {
+            "word": "ind",
+            "count": 18482
+        },
+        {
+            "word": "last",
+            "count": 18376
+        },
+        {
+            "word": "party",
+            "count": 18301
+        },
+        {
+            "word": "time",
+            "count": 17829
+        },
+        {
+            "word": "social",
+            "count": 17180
+        },
+        {
+            "word": "official",
+            "count": 16661
+        },
+        {
+            "word": "first",
+            "count": 16184
+        },
+        {
+            "word": "washington",
+            "count": 15987
+        },
+        {
+            "word": "groups",
+            "count": 15814
+        },
+        {
+            "word": "national",
+            "count": 15328
+        },
+        {
+            "word": "even",
+            "count": 15112
+        },
+        {
+            "word": "country",
+            "count": 15095
+        },
+        {
+            "word": "former",
+            "count": 15005
+        },
+        {
+            "word": "years",
+            "count": 14609
+        },
+        {
+            "word": "security",
+            "count": 14437
+        },
+        {
+            "word": "law",
+            "count": 13964
+        }
+    ],
+    "Top Lemmas": [
+        {
+            "lemma": "NUM",
+            "count": 247359
+        },
+        {
+            "lemma": "say",
+            "count": 151562
+        },
+        {
+            "lemma": "trump",
+            "count": 119296
+        },
+        {
+            "lemma": "would",
+            "count": 49313
+        },
+        {
+            "lemma": "president",
+            "count": 48664
+        },
+        {
+            "lemma": "state",
+            "count": 41091
+        },
+        {
+            "lemma": "year",
+            "count": 36240
+        },
+        {
+            "lemma": "people",
+            "count": 36138
+        },
+        {
+            "lemma": "make",
+            "count": 33283
+        },
+        {
+            "lemma": "one",
+            "count": 33087
+        },
+        {
+            "lemma": "go",
+            "count": 29026
+        },
+        {
+            "lemma": "new",
+            "count": 27799
+        },
+        {
+            "lemma": "official",
+            "count": 27414
+        },
+        {
+            "lemma": "also",
+            "count": 26737
+        },
+        {
+            "lemma": "take",
+            "count": 26558
+        },
+        {
+            "lemma": "government",
+            "count": 26474
+        },
+        {
+            "lemma": "group",
+            "count": 26266
+        },
+        {
+            "lemma": "tell",
+            "count": 25631
+        },
+        {
+            "lemma": "donald",
+            "count": 25333
+        },
+        {
+            "lemma": "news",
+            "count": 25056
+        },
+        {
+            "lemma": "house",
+            "count": 24968
+        },
+        {
+            "lemma": "republican",
+            "count": 24712
+        },
+        {
+            "lemma": "reuters",
+            "count": 23233
+        },
+        {
+            "lemma": "clinton",
+            "count": 23218
+        },
+        {
+            "lemma": "medium",
+            "count": 22966
+        },
+        {
+            "lemma": "get",
+            "count": 22947
+        },
+        {
+            "lemma": "election",
+            "count": 22544
+        },
+        {
+            "lemma": "call",
+            "count": 22388
+        },
+        {
+            "lemma": "party",
+            "count": 21939
+        },
+        {
+            "lemma": "via",
+            "count": 21808
+        },
+        {
+            "lemma": "country",
+            "count": 21645
+        },
+        {
+            "lemma": "time",
+            "count": 21503
+        },
+        {
+            "lemma": "could",
+            "count": 21093
+        },
+        {
+            "lemma": "campaign",
+            "count": 20704
+        },
+        {
+            "lemma": "obama",
+            "count": 20700
+        },
+        {
+            "lemma": "right",
+            "count": 20533
+        },
+        {
+            "lemma": "united",
+            "count": 20279
+        },
+        {
+            "lemma": "like",
+            "count": 20073
+        },
+        {
+            "lemma": "white",
+            "count": 19779
+        },
+        {
+            "lemma": "reference",
+            "count": 19598
+        },
+        {
+            "lemma": "vote",
+            "count": 18807
+        },
+        {
+            "lemma": "two",
+            "count": 18805
+        },
+        {
+            "lemma": "last",
+            "count": 18784
+        },
+        {
+            "lemma": "index",
+            "count": 18752
+        },
+        {
+            "lemma": "know",
+            "count": 18687
+        },
+        {
+            "lemma": "ind",
+            "count": 18482
+        },
+        {
+            "lemma": "come",
+            "count": 18039
+        },
+        {
+            "lemma": "report",
+            "count": 17715
+        },
+        {
+            "lemma": "states",
+            "count": 17683
+        },
+        {
+            "lemma": "include",
+            "count": 17497
+        }
+    ],
+    "Vocabulary Size": 109826,
+    "Unique Token Count": 98910,
+    "Most Frequent Terms": [
+        "NUM",
+        "say",
+        "trump",
+        "would",
+        "president",
+        "state",
+        "year",
+        "people",
+        "make",
+        "one"
+    ],
+    "Average Tokens Per Article": 172.79,
+    "Language Distribution": {
+        "en": 56573
+    }
+}

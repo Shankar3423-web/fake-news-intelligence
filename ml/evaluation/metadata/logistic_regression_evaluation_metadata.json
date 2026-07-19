@@ -1,0 +1,26 @@
+{
+    "model_key": "logistic_regression",
+    "model_id": "logistic_regression",
+    "algorithm": "Logistic Regression",
+    "evaluation_date": "2026-07-19T04:06:20Z",
+    "training_version": "run_2_20260719_085859",
+    "dataset_version": "1.0.1",
+    "feature_selection_version": "2",
+    "metrics": {
+        "accuracy": 0.942996,
+        "precision": 0.939129,
+        "recall": 0.943082,
+        "f1_score": 0.941101,
+        "roc_auc": 0.988177,
+        "balanced_accuracy": 0.942999,
+        "mcc": 0.885882,
+        "cohen_kappa": 0.885874,
+        "log_loss": 0.148816,
+        "prediction_time_sec": 0.0131,
+        "inference_throughput_sps": 861701.32,
+        "inference_latency_ms": 0.001158,
+        "memory_used_mb": 0.2,
+        "model_size_bytes": 9679,
+        "model_size_mb": 0.0092
+    }
+}

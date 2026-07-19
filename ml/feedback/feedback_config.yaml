@@ -1,0 +1,42 @@
+# Configuration for Phase 10 Feedback Collection System
+feedback:
+  max_comment_length: 500
+  min_comment_length: 3
+  allowed_feedback_values:
+    - "Correct"
+    - "Incorrect"
+    - "Unsure"
+    - "AGREE"
+    - "DISAGREE"
+    - "TRUE"
+    - "FALSE"
+  allow_empty_comments: true
+  system_version: "1.0.0"
+
+exports:
+  enable_charts: true
+  enable_reports: true
+  enable_metadata: true
+  enable_statistics: true
+  enable_versioning: true
+  enable_hash_generation: true
+
+paths:
+  output_dir: "ml/feedback"
+  logs_dir: "ml/feedback/logs"
+  reports_dir: "ml/feedback/reports"
+  statistics_dir: "ml/feedback/statistics"
+  metadata_dir: "ml/feedback/metadata"
+  history_dir: "ml/feedback/history"
+  hashes_dir: "ml/feedback/hashes"
+  versions_dir: "ml/feedback/versions"
+  charts_dir: "ml/feedback/charts"
+  
+  # File paths
+  feedback_history_csv: "ml/feedback/history/feedback_history.csv"
+  feedback_statistics_json: "ml/feedback/statistics/feedback_statistics.json"
+  feedback_metadata_json: "ml/feedback/metadata/feedback_metadata.json"
+  feedback_report_md: "ml/feedback/reports/feedback_report.md"
+  feedback_hashes_json: "ml/feedback/hashes/feedback_hashes.json"
+  feedback_versions_json: "ml/feedback/versions/feedback_versions.json"
+  feedback_pipeline_log: "ml/feedback/logs/feedback_pipeline.log"

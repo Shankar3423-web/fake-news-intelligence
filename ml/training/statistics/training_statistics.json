@@ -1,0 +1,16 @@
+{
+    "dataset_size_bytes": 170484084,
+    "feature_count": 283,
+    "training_rows": 45258,
+    "testing_rows": 11315,
+    "training_duration_sec": 23.8903,
+    "memory_used_mb": 581.62,
+    "per_model_duration_sec": {
+        "logistic_regression": 14.8061,
+        "svm": 2.3967,
+        "random_forest": 2.2898,
+        "xgboost": 2.3382
+    },
+    "total_models_trained": 4,
+    "average_training_time_sec": 5.4577
+}

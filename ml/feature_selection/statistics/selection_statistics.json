@@ -1,0 +1,36 @@
+{
+    "summary": {
+        "total_input_features": 5029,
+        "total_output_features": 283,
+        "reduction_percentage": 94.37,
+        "total_execution_time_seconds": 28.26
+    },
+    "by_feature_type": {
+        "dense": {
+            "input": 29,
+            "output": 19,
+            "reduction_percentage": 34.48
+        },
+        "sparse": {
+            "input": 5000,
+            "output": 264,
+            "reduction_percentage": 94.72
+        }
+    },
+    "selector_runtimes_seconds": {
+        "variance": 0.0994,
+        "correlation": 0.127,
+        "mutual_information": 10.4116,
+        "chi_square": 0.0843,
+        "random_forest": 1.257,
+        "rfe": 2.5062
+    },
+    "selector_selected_counts": {
+        "variance": 71,
+        "correlation": 5013,
+        "mutual_information": 165,
+        "chi_square": 215,
+        "random_forest": 100,
+        "rfe": 30
+    }
+}

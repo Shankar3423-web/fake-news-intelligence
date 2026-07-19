@@ -1,0 +1,116 @@
+# ====================================================================================================
+# PHASE 12: AUTOMATIC MODEL RETRAINING CONFIGURATION
+# Production-Grade Fake News Intelligence System
+# ====================================================================================================
+
+# ── Approved feedback source (from Phase 11) ──────────────────────────────────────────────────────
+approved_feedback:
+  csv_path: "ml/admin_review/approved/approved_feedback.csv"
+  required_columns:
+    - "Feedback ID"
+    - "Timestamp"
+    - "Prediction"
+    - "Decision"
+    - "Feedback"
+  valid_labels:
+    - 0
+    - 1
+  min_records: 1
+
+# ── Existing training dataset (from Phase 5) ──────────────────────────────────────────────────────
+training_dataset:
+  csv_path: "ml/feature_selection/processed/selected_feature_dataset_v1.csv"
+  feature_names_json: "ml/feature_selection/processed/selected_feature_names.json"
+  label_column: "label"
+  id_column: "id"
+
+# ── Raw dataset for preprocessing merge (Phase 2 output) ─────────────────────────────────────────
+raw_dataset:
+  csv_path: "ml/dataset/processed/fake_news_dataset.csv"
+  text_column: "text"
+  label_column: "label"
+
+# ── Phase configs (reused as-is) ──────────────────────────────────────────────────────────────────
+phase_configs:
+  preprocessing: "config/preprocessing_config.yaml"
+  feature_engineering: "config/feature_config.yaml"
+  feature_selection: "config/selection_config.yaml"
+  training: "ml/training/training_config.yaml"
+  evaluation: "ml/evaluation/evaluation_config.yaml"
+
+# ── Candidate model output paths ──────────────────────────────────────────────────────────────────
+candidate:
+  models_dir: "ml/retraining/candidate_models"
+  production_models_dir: "ml/retraining/production_models"
+  registry_file: "ml/retraining/registry/retraining_registry.json"
+
+# ── Output directories ────────────────────────────────────────────────────────────────────────────
+outputs:
+  logs_dir: "ml/retraining/logs"
+  reports_dir: "ml/retraining/reports"
+  metadata_dir: "ml/retraining/metadata"
+  statistics_dir: "ml/retraining/statistics"
+  versions_dir: "ml/retraining/versions"
+  hashes_dir: "ml/retraining/hashes"
+  charts_dir: "ml/retraining/charts"
+  registry_dir: "ml/retraining/registry"
+
+# ── Output file paths ─────────────────────────────────────────────────────────────────────────────
+output_files:
+  retraining_report: "ml/retraining/reports/retraining_report.md"
+  comparison_report: "ml/retraining/reports/comparison_report.md"
+  retraining_statistics: "ml/retraining/statistics/retraining_statistics.json"
+  retraining_metadata: "ml/retraining/metadata/retraining_metadata.json"
+  retraining_hashes: "ml/retraining/hashes/retraining_hashes.json"
+  retraining_versions: "ml/retraining/versions/retraining_versions.json"
+  deployment_decision: "ml/retraining/reports/deployment_decision.json"
+  retraining_log: "ml/retraining/logs/retraining_pipeline.log"
+
+# ── Model comparison acceptance policy ───────────────────────────────────────────────────────────
+acceptance_policy:
+  # Primary metric to compare (options: accuracy, precision, recall, f1_score, roc_auc, mcc,
+  # balanced_accuracy, inference_time, memory_usage)
+  primary_metric: "f1_score"
+  # Candidate must beat production by at least this delta
+  minimum_improvement_delta: 0.0
+  # Candidate must meet these minimum thresholds regardless of comparison result
+  minimum_thresholds:
+    f1_score: 0.60
+    accuracy: 0.60
+  # If true, promote candidate even when primary metric is equal (tie-breaking → prefer new)
+  promote_on_tie: false
+  # Secondary metrics used for weighted comparison (weights must sum to 1.0)
+  weighted_comparison:
+    enabled: true
+    weights:
+      f1_score: 0.35
+      roc_auc: 0.25
+      accuracy: 0.15
+      precision: 0.10
+      recall: 0.10
+      mcc: 0.05
+  # Inference time: lower is better (in seconds)
+  inference_time_threshold_sec: 5.0
+  # Memory: lower is better (MB)
+  memory_threshold_mb: 512.0
+
+# ── Merge configuration ───────────────────────────────────────────────────────────────────────────
+merge:
+  # Strategy when duplicate IDs are found (first / last / error)
+  duplicate_strategy: "last"
+  # Shuffle merged dataset before re-training
+  shuffle: true
+  random_state: 42
+
+# ── Random state (for reproducibility) ───────────────────────────────────────────────────────────
+random_state: 42
+
+# ── Feature mapping for approved feedback → training schema ──────────────────────────────────────
+# Maps feedback columns to training dataset label column
+feedback_label_mapping:
+  # Decision-to-label translation (Feedback "Decision" values → integer labels)
+  decisions_to_label:
+    "REAL": 0
+    "FAKE": 1
+    "SUSPECTED REAL": 0
+    "SUSPECTED FAKE": 1

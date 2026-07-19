@@ -1,0 +1,62 @@
+{
+  "timestamp": 1784446639.598283,
+  "provider": "newsapi",
+  "query": "NASA Artemis Florida mission rocket Kennedy",
+  "response": [
+    {
+      "title": "I Am Artemis: Jason Peterson",
+      "description": "Jason Peterson’s responsibilities for NASA’s Artemis II mission went beyond his usual role as the range operations manager at NASA’s Stennis Space Center near Bay St. Louis, Mississippi. \n\nPeterson credits his military experience with preparing him for the 12…",
+      "content": "Jason Petersons responsibilities for NASAs Artemis II mission went beyond his usual role as the range operations manager at NASAs Stennis Space Center near Bay St. Louis, Mississippi.\r\nFor Peterson, … [+3938 chars]",
+      "url": "https://www.nasa.gov/humans-in-space/i-am-artemis-jason-peterson/",
+      "source": "NASA",
+      "author": "Catherine E. Williams",
+      "published_date": "2026-06-23T14:27:29Z",
+      "language": "en",
+      "provider": "newsapi"
+    },
+    {
+      "title": "NASA’s Artemis II Breaks Agency Streaming Record",
+      "description": "NASA’s live coverage of the Artemis II mission mission drew unprecedented public interest – including more than 149.4 million views of the launch, lunar flyby, splashdown on NASA-owned platforms, including the 24/7 streams covering the mission and the Orion s…",
+      "content": "NASAs live coverage of the Artemis II mission mission drew unprecedented public interest  including more than 149.4 million views of the launch, lunar flyby, splashdown on NASA-owned platforms, inclu… [+10827 chars]",
+      "url": "https://www.nasa.gov/general/nasas-artemis-ii-breaks-agency-streaming-record/",
+      "source": "NASA",
+      "author": "Brittany A. Brown",
+      "published_date": "2026-07-02T18:02:21Z",
+      "language": "en",
+      "provider": "newsapi"
+    },
+    {
+      "title": "NASA at the Ion: Orion Lessons from Artemis II Shape NASA’s Moon to Mars Path",
+      "description": "Seven weeks after the Orion spacecraft returned four astronauts from humanity’s first crewed journey around the Moon since Apollo, Artemis II Orion Vehicle Manager Branelle Rodriguez reflected on the mission’s achievements and how it is shaping NASA’s return …",
+      "content": "Seven weeks after the Orion spacecraft returned four astronauts from humanitys first crewed journey around the Moon since Apollo, Artemis II Orion Vehicle Manager Branelle Rodriguez reflected on the … [+4187 chars]",
+      "url": "https://www.nasa.gov/centers-and-facilities/johnson/nasa-at-the-ion-orion-lessons-from-artemis-ii-shape-nasas-moon-to-mars-path/",
+      "source": "NASA",
+      "author": "Sumer Loggins",
+      "published_date": "2026-06-24T21:29:16Z",
+      "language": "en",
+      "provider": "newsapi"
+    },
+    {
+      "title": "How NASA’s Artemis III Lander Test Will Pave Way for Moon Landings",
+      "description": "Before Artemis astronauts land on the Moon’s surface in 2028, NASA will conduct the Artemis III demonstration mission in 2027, allowing teams on Earth and in orbit to practice rendezvous and docking operations between commercial human landing systems and the …",
+      "content": "Before Artemis astronauts land on the Moons surface in 2028, NASA will conduct the Artemis III demonstration mission in 2027, allowing teams on Earth and in orbit to practice rendezvous and docking o… [+7749 chars]",
+      "url": "https://www.nasa.gov/directorates/esdmd/artemis-campaign-development-division/human-landing-system-program/how-nasas-artemis-iii-lander-test-will-pave-way-for-moon-landings/",
+      "source": "NASA",
+      "author": "Lee Mohon",
+      "published_date": "2026-07-15T18:50:52Z",
+      "language": "en",
+      "provider": "newsapi"
+    },
+    {
+      "title": "NASA’s Roman Space Telescope reaches Kennedy eight months ahead of schedule, with a Falcon Heavy launch now set for Aug. 30",
+      "description": "The next-generation observatory arrived in Florida on June 21 to begin a roughly 70-day march to the pad. NASA is targeting liftoff no earlier than Aug. 30 on a SpaceX Falcon Heavy.\nThe post NASA’s Roman Space Telescope reaches Kennedy eight months ahead of s…",
+      "content": "NASA’s Nancy Grace Roman Space Telescope arrived at the agency’s Kennedy Space Center in Florida on June 21, beginning the final stretch of preparations before a launch now expected in late summer. N… [+3361 chars]",
+      "url": "https://spacedaily.com/s-nasas-roman-space-telescope-reaches-kennedy-eight-months-ahead-of-schedule-with-a-falcon-heavy-launch-now-set-for-aug-30/",
+      "source": "Space Daily",
+      "author": "Space Daily Editorial Team",
+      "published_date": "2026-06-23T20:00:53Z",
+      "language": "en",
+      "provider": "newsapi"
+    }
+  ]
+}
