@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 # Add backend directory to sys.path so we can import app modules
-backend_dir = str(Path(__file__).resolve().parent.parent / "backend")
+backend_dir = str(Path(__file__).resolve().parent.parent)
 if backend_dir not in sys.path:
     sys.path.append(backend_dir)
 

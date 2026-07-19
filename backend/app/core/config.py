@@ -3,7 +3,7 @@ from pydantic_settings import BaseSettings
 from pydantic import ConfigDict
 
 # Locate .env file relative to this file's position (4 levels up from backend/app/core/config.py)
-env_path = Path(__file__).resolve().parents[3] / ".env"
+env_path = Path(__file__).resolve().parents[2] / ".env"
 
 class Settings(BaseSettings):
     APP_NAME: str = "Fake News Intelligence System"
