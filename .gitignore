@@ -26,4 +26,9 @@ frontend/node_modules/
 *.png
 *.pkl
 *.zip
-*.tar.gz
+*.tar.gz
+
+# Keep essential models and vectorizers
+!**/model.joblib
+!**/tfidf_vectorizer.joblib
+
