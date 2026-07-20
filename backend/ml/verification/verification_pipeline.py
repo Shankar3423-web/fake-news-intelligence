@@ -29,6 +29,9 @@ from ml.verification.verification_validator import VerificationValidator
 
 logger = logging.getLogger("verification_pipeline")
 
+_cached_extractor = None
+_cached_sim_engine = None
+
 def run_verification_pipeline(
     article_text: str,
     prediction_response: Dict[str, Any],
@@ -73,7 +76,13 @@ def run_verification_pipeline(
             logger.warning(f"API key validation issues: {key_warns}")
             warnings.extend(key_warns)
 
-        extractor = KeywordExtractor()
+        global _cached_extractor, _cached_sim_engine
+        if _cached_extractor is None:
+            _cached_extractor = KeywordExtractor()
+        if _cached_sim_engine is None:
+            _cached_sim_engine = SimilarityEngine()
+            
+        extractor = _cached_extractor
         cache_mgr = CacheManager(
             cache_dir=config.get_path("cache_dir"),
             ttl_seconds=config.cache_expiration
@@ -89,7 +98,7 @@ def run_verification_pipeline(
         )
         normalizer = ArticleNormalizer()
         dupe_remover = DuplicateRemover(duplicate_threshold=config.duplicate_threshold)
-        sim_engine = SimilarityEngine()
+        sim_engine = _cached_sim_engine
         ranker = ArticleRanker(similarity_engine=sim_engine)
         evidence_eng = EvidenceEngine()
         decision_eng = DecisionEngine(config=config)

@@ -3,14 +3,9 @@ import re
 from typing import List, Dict, Any, Set
 from collections import Counter
 
-logger = logging.getLogger("verification_pipeline")
+from ml.preprocessing.preprocessing_utils import get_shared_spacy_model
 
-try:
-    import spacy
-    SPACY_AVAILABLE = True
-except ImportError:
-    SPACY_AVAILABLE = False
-    logger.warning("spaCy is not installed in the current environment. KeywordExtractor will use regex fallback.")
+logger = logging.getLogger("verification_pipeline")
 
 # Common English stopwords + news-specific words to ignore in query generation
 STOPWORDS: Set[str] = {
@@ -38,18 +33,11 @@ class KeywordExtractor:
     """
     def __init__(self, model_name: str = "en_core_web_sm") -> None:
         self.model_name = model_name
-        self.nlp = None
-        
-        if SPACY_AVAILABLE:
-            try:
-                self.nlp = spacy.load(self.model_name)
-            except Exception as e:
-                logger.warning(f"Could not load spaCy model '{self.model_name}' directly: {e}. Attempting import fallback...")
-                try:
-                    import en_core_web_sm
-                    self.nlp = en_core_web_sm.load()
-                except Exception as e_inner:
-                    logger.warning(f"Failed to load spaCy model: {e_inner}. Falling back to regex extraction.")
+        try:
+            self.nlp = get_shared_spacy_model(self.model_name)
+        except Exception as e:
+            logger.warning(f"Could not load shared spaCy model '{self.model_name}': {e}. Falling back to regex extraction.")
+            self.nlp = None
 
     def extract(self, text: str) -> Dict[str, Any]:
         """

@@ -1,8 +1,6 @@
 import pandas as pd
 import logging
-import spacy
-from typing import Dict, Any, List
-from ml.feature_engineering.feature_config import FeatureConfig
+from ml.preprocessing.preprocessing_utils import get_shared_spacy_model
 
 logger = logging.getLogger("feature_engineering_pipeline")
 
@@ -20,20 +18,7 @@ class LinguisticFeatureExtractor:
         self.config = config
         self.model_name = config.spacy_model
         self.spacy_batch_size = config.spacy_batch_size
-        self._nlp = self._load_spacy_model()
-
-    def _load_spacy_model(self) -> spacy.language.Language:
-        """Loads the spaCy model."""
-        try:
-            logger.info(f"Loading spaCy model '{self.model_name}'...")
-            return spacy.load(self.model_name)
-        except OSError:
-            logger.warning(f"spaCy model '{self.model_name}' not found. Attempting to load 'en_core_web_sm' fallback...")
-            try:
-                return spacy.load("en_core_web_sm")
-            except Exception as e:
-                logger.critical(f"Failed to load any spaCy model: {e}")
-                raise e
+        self._nlp = get_shared_spacy_model(self.model_name)
 
     def extract_features(self, texts: pd.Series) -> pd.DataFrame:
         """

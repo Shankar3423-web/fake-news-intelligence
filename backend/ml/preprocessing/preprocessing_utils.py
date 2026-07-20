@@ -55,3 +55,26 @@ def ensure_spacy_model(model_name: str = "en_core_web_sm") -> bool:
             except Exception as e_sub:
                 logger.critical(f"Failed all attempts to download spaCy model '{model_name}': {e_sub}")
                 return False
+
+_SPACY_CACHE = {}
+
+def get_shared_spacy_model(model_name: str = "en_core_web_sm") -> spacy.language.Language:
+    """
+    Returns a single, shared spaCy model instance across the entire application.
+    This prevents creating multiple copies of spaCy in RAM, keeping total memory well below 512MB.
+    """
+    global _SPACY_CACHE
+    if model_name not in _SPACY_CACHE:
+        logger.info(f"Loading single shared spaCy model instance '{model_name}'...")
+        ensure_spacy_model(model_name)
+        try:
+            _SPACY_CACHE[model_name] = spacy.load(model_name)
+        except Exception:
+            try:
+                import en_core_web_sm
+                _SPACY_CACHE[model_name] = en_core_web_sm.load()
+            except Exception as e_inner:
+                logger.error(f"Failed to load shared spaCy model '{model_name}': {e_inner}")
+                raise e_inner
+    return _SPACY_CACHE[model_name]
+

@@ -1,29 +1,18 @@
 import logging
 from typing import List
-import spacy
+from ml.preprocessing.preprocessing_utils import get_shared_spacy_model
 
 logger = logging.getLogger("preprocessing_pipeline")
 
 class Lemmatizer:
     """
     Lemmatizes tokens using spaCy's English model.
-    Optimized by disabling parser and ner components.
+    Uses shared spaCy instance to conserve RAM.
     """
     
     def __init__(self, model_name: str = "en_core_web_sm") -> None:
         self.model_name = model_name
-        try:
-            # Disable parser and ner for optimization (major speedup)
-            self.nlp = spacy.load(self.model_name, disable=["parser", "ner"])
-        except Exception as e:
-            logger.warning(f"Could not load spaCy model '{self.model_name}' directly: {e}. Attempting import check...")
-            # Fallback to loading it by import if it was installed as a module
-            try:
-                import en_core_web_sm
-                self.nlp = en_core_web_sm.load(disable=["parser", "ner"])
-            except Exception as e_inner:
-                logger.error(f"Critical error loading spaCy model: {e_inner}")
-                raise e_inner
+        self.nlp = get_shared_spacy_model(self.model_name)
 
     def lemmatize(self, tokens: List[str]) -> List[str]:
         """
