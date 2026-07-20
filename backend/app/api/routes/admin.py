@@ -21,18 +21,43 @@ def review_feedback(
     try:
         from app.database.models.feedback import Feedback
         
-        feedback = db.query(Feedback).filter(Feedback.id == int(request.feedback_id)).first()
+        try:
+            fb_id_int = int(request.feedback_id)
+        except ValueError:
+            raise HTTPException(status_code=400, detail="Invalid feedback_id format. Must be an integer ID.")
+
+        feedback = db.query(Feedback).filter(Feedback.id == fb_id_int).first()
         if not feedback:
-            raise HTTPException(status_code=404, detail="Feedback not found")
+            raise HTTPException(status_code=404, detail=f"Feedback ID {request.feedback_id} not found in database.")
             
-        feedback.status = request.review_status.upper()
+        status_upper = request.review_status.upper().strip()
+        if status_upper in ("ACCEPT", "ACCEPTED", "APPROVED"):
+            status_upper = "APPROVED"
+        elif status_upper in ("REJECT", "REJECTED", "DECLINED"):
+            status_upper = "REJECTED"
+        else:
+            raise HTTPException(status_code=400, detail=f"Invalid review_status: '{request.review_status}'. Allowed values are APPROVED/ACCEPT or REJECTED/REJECT.")
+
+        feedback.status = status_upper
         db.commit()
         db.refresh(feedback)
         
+        # Try to sync with local ML pipeline files if available
+        try:
+            from ml.admin_review.admin_review_pipeline import run_admin_review_pipeline
+            run_admin_review_pipeline(
+                feedback_id=str(feedback.id),
+                review_status=status_upper,
+                reviewer=request.reviewer or "Admin",
+                notes=request.notes or ""
+            )
+        except Exception as ml_err:
+            logger.warning(f"ML pipeline sync skipped/failed during admin review: {ml_err}")
+
         return AdminReviewResponse(
             review_id=str(feedback.id),
             status="SUCCESS",
-            updated_statistics={"total_reviewed": 1},
+            updated_statistics={"total_reviewed": 1, "final_status": status_upper},
             metadata={"reviewer": request.reviewer, "notes": request.notes}
         )
         
@@ -59,6 +84,7 @@ def get_pending_reviews(
         
         pending_records = []
         for f in pending_feedbacks:
+            headline = f.prediction.title if (f.prediction and f.prediction.title) else (f.prediction.text_content[:60] + "..." if f.prediction else "Unknown Headline")
             pending_records.append({
                 "Feedback ID": str(f.id),
                 "Timestamp": f.created_at.isoformat() if f.created_at else None,
@@ -66,10 +92,11 @@ def get_pending_reviews(
                 "Verification": f.prediction.live_verifications[0].verdict if (f.prediction and f.prediction.live_verifications) else "UNVERIFIED",
                 "Final Decision": f.prediction.predicted_label if f.prediction else "UNKNOWN",
                 "User Feedback": "AGREE" if f.is_correct else "DISAGREE",
-                "Comment": f.user_comment,
+                "Comment": f.user_comment or "No comment provided",
                 "Similarity Score": 0.0,
                 "Evidence Score": 0.0,
-                "Confidence": f.prediction.confidence_score if f.prediction else 0.0
+                "Confidence": f.prediction.confidence_score if f.prediction else 0.0,
+                "Headline": headline
             })
             
         return PendingReviewsResponse(pending_feedbacks=pending_records)
@@ -79,3 +106,4 @@ def get_pending_reviews(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"An unexpected error occurred: {str(e)}"
         )
+

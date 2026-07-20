@@ -5,7 +5,7 @@ class AdminReviewRequest(BaseModel):
     feedback_id: str = Field(..., description="The unique ID of the feedback being reviewed")
     review_status: str = Field(..., description="The decision of the reviewer (e.g., APPROVED, REJECTED)")
     reviewer: str = Field(..., description="Identifier of the reviewer")
-    notes: str = Field(..., description="Reviewer's notes explaining the decision")
+    notes: Optional[str] = Field("", description="Reviewer's notes explaining the decision")
 
 class AdminReviewResponse(BaseModel):
     review_id: str = Field(..., description="Unique ID of the review record")

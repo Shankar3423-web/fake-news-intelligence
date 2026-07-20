@@ -17,6 +17,7 @@ import Dashboard from './pages/Dashboard';
 import History from './pages/History';
 import Statistics from './pages/Statistics';
 import Feedback from './pages/Feedback';
+import AdminPanel from './pages/AdminPanel';
 import About from './pages/About';
 
 function AppLayout() {
@@ -42,6 +43,7 @@ function AppLayout() {
               <Route path="/history" element={<History />} />
               <Route path="/statistics" element={<Statistics />} />
               <Route path="/feedback" element={<Feedback />} />
+              <Route path="/admin" element={<AdminPanel />} />
               <Route path="/about" element={<About />} />
               {/* Fallback route */}
               <Route path="*" element={<Navigate to="/" replace />} />

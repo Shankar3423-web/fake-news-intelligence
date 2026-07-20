@@ -45,6 +45,8 @@ def submit_feedback(
         
         # 1. Find the last prediction in the database for THIS user to link this feedback to
         db_prediction = db.query(Prediction).filter(Prediction.user_id == current_user.id).order_by(Prediction.id.desc()).first()
+        if not db_prediction:
+            db_prediction = db.query(Prediction).order_by(Prediction.id.desc()).first()
         
         # 2. Insert feedback record
         if db_prediction:
@@ -53,7 +55,8 @@ def submit_feedback(
                 prediction_id=db_prediction.id,
                 user_id=current_user.id,
                 is_correct=is_correct_val,
-                user_comment=request.comment
+                user_comment=request.comment,
+                status="PENDING"
             )
             db.add(db_feedback)
             db.commit()

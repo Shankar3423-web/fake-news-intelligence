@@ -1,6 +1,7 @@
 import pandas as pd
 import logging
 from ml.preprocessing.preprocessing_utils import get_shared_spacy_model
+from ml.feature_engineering.feature_config import FeatureConfig
 
 logger = logging.getLogger("feature_engineering_pipeline")
 
