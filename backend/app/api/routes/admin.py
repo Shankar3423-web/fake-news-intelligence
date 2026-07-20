@@ -98,20 +98,44 @@ def get_pending_reviews(
                 user_feedback = "DISAGREE"
 
             pending_records.append({
+                # Standard Title Case Keys
                 "Feedback ID": str(f.id),
                 "Prediction ID": str(f.prediction_id) if f.prediction_id else "N/A",
                 "Timestamp": f.created_at.isoformat() if f.created_at else None,
                 "Prediction": pred_label,
                 "User Correction": user_correction,
-                "Is Correct": f.is_correct,
                 "User Feedback": user_feedback,
+                "Is Correct": f.is_correct,
+                "Comment": f.user_comment or "No comment provided",
+                "User Comments": f.user_comment or "No comment provided",
+                "Headline": headline,
+                "News Title": headline,
+                "Article Title": headline,
+
+                # Compatibility Keys (snake_case & lowercase)
+                "feedback_id": str(f.id),
+                "prediction_id": str(f.prediction_id) if f.prediction_id else "N/A",
+                "timestamp": f.created_at.isoformat() if f.created_at else None,
+                "created_at": f.created_at.isoformat() if f.created_at else None,
+                "prediction": pred_label,
+                "predicted_label": pred_label,
+                "model_prediction": pred_label,
+                "user_correction": user_correction,
+                "user_feedback": user_feedback,
+                "user_comment": f.user_comment or "No comment provided",
+                "user_comments": f.user_comment or "No comment provided",
+                "is_correct": f.is_correct,
+                "headline": headline,
+                "title": headline,
+                "news_title": headline,
+                "article_title": headline,
+
+                # Additional Meta
                 "Verification": f.prediction.live_verifications[0].verdict if (f.prediction and f.prediction.live_verifications) else "UNVERIFIED",
                 "Final Decision": pred_label,
-                "Comment": f.user_comment or "No comment provided",
                 "Similarity Score": 0.0,
                 "Evidence Score": 0.0,
                 "Confidence": f.prediction.confidence_score if f.prediction else 0.0,
-                "Headline": headline
             })
             
         return PendingReviewsResponse(pending_feedbacks=pending_records)
