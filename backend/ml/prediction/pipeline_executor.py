@@ -178,15 +178,6 @@ class PipelineExecutor:
         """
         Orchestrates full preprocessing, feature extraction, TF-IDF mapping, 
         and validates feature vector compatibility.
-        
-        Args:
-            raw_text: Raw news article text
-            expected_feature_order: Exact list of feature names expected by the model
-            
-        Returns:
-            Tuple of:
-                - feature_vector: DataFrame with 1 row, columns aligned with expected_feature_order
-                - cleaned_text: Preprocessed text string
         """
         # Step 1: Preprocess text
         cleaned_text, lang = self.preprocess_text(raw_text)
@@ -198,7 +189,13 @@ class PipelineExecutor:
         logger.info("Generating TF-IDF feature representation...")
         tfidf_matrix = self.tfidf_vectorizer.transform(pd.Series([cleaned_text]))
         
-        # Step 4: Map & align to selected features
+        # Step 4 & 5: Map & align to selected features
+        feature_vector = self.align_features(df_dense, tfidf_matrix, expected_feature_order)
+        
+        return feature_vector, cleaned_text
+
+    def align_features(self, df_dense: pd.DataFrame, tfidf_matrix: Any, expected_feature_order: List[str]) -> pd.DataFrame:
+        """Aligns pre-extracted dense and sparse features to the model's exact expected feature order."""
         logger.info("Aligning and building final feature vector...")
         features_dict = {}
         vocab = self.tfidf_vectorizer.vocabulary_
@@ -221,10 +218,10 @@ class PipelineExecutor:
         # Construct final ordered DataFrame
         feature_vector = pd.DataFrame([features_dict], columns=expected_feature_order)
         
-        # Step 5: Validate feature vector compatibility
+        # Validate feature vector compatibility
         self.validate_feature_vector(feature_vector, expected_feature_order)
         
-        return feature_vector, cleaned_text
+        return feature_vector
 
     def validate_feature_vector(self, feature_vector: pd.DataFrame, expected_feature_order: List[str]) -> None:
         """Validates feature count, ordering, and names."""

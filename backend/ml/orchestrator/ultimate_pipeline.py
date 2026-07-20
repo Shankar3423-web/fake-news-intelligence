@@ -83,6 +83,12 @@ def run_ultimate_pipeline(title: str, text: str) -> Dict[str, Any]:
         calculator = ConfidenceCalculator()
         engine = InferenceEngine(calculator)
         
+        # Build the feature matrix ONCE for all models to avoid redundant spaCy processing
+        import pandas as pd
+        cleaned_text, _ = executor.preprocess_text(full_text)
+        df_dense = executor.extract_dense_features(full_text)
+        tfidf_matrix = executor.tfidf_vectorizer.transform(pd.Series([cleaned_text]))
+        
         for model_info in all_models:
             try:
                 model_key = model_info["model_key"]
@@ -90,8 +96,8 @@ def run_ultimate_pipeline(title: str, text: str) -> Dict[str, Any]:
                 feature_order = model_info["feature_order"]
                 metadata = model_info["metadata"]
                 
-                # Build feature vector aligned to this model's feature order
-                feature_vector, _ = executor.execute(full_text, feature_order)
+                # Align the pre-calculated features to this specific model's order
+                feature_vector = executor.align_features(df_dense, tfidf_matrix, feature_order)
                 
                 # Run inference
                 inference_result = engine.predict(model_obj, feature_vector)
