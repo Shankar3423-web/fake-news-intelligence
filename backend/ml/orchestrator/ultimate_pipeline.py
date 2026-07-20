@@ -74,7 +74,7 @@ def run_ultimate_pipeline(title: str, text: str) -> Dict[str, Any]:
         all_models = loader.load_all_models()
         
         # Build the feature vector once (reuse preprocessing from the primary pipeline)
-        executor = PipelineExecutor(
+        executor = PipelineExecutor.get_instance(
             preprocessing_config_path="config/preprocessing_config.yaml",
             feature_config_path="config/feature_config.yaml",
             tfidf_vectorizer_path="ml/feature_engineering/processed/tfidf_vectorizer.joblib"

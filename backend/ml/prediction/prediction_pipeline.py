@@ -78,7 +78,7 @@ def run_prediction_pipeline(
             warnings.append(f"Could not load evaluation versions: {e}")
             
     # 4. Pipeline Execution: Preprocessing & Feature Engineering & Alignment
-    executor = PipelineExecutor(
+    executor = PipelineExecutor.get_instance(
         preprocessing_config_path="config/preprocessing_config.yaml",
         feature_config_path="config/feature_config.yaml",
         tfidf_vectorizer_path=config.get_path("tfidf_vectorizer")

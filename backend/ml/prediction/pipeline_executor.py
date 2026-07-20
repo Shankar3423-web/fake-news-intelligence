@@ -25,6 +25,8 @@ from ml.feature_engineering.linguistic_features import LinguisticFeatureExtracto
 
 logger = logging.getLogger("prediction_pipeline")
 
+_executor_instance = None
+
 class PipelineExecutor:
     """
     Executes the exact preprocessing, feature engineering, and feature selection pipelines
@@ -43,6 +45,25 @@ class PipelineExecutor:
         self._init_preprocessing()
         self._init_feature_engineering()
         self._load_tfidf_vectorizer()
+
+    @classmethod
+    def get_instance(
+        cls,
+        preprocessing_config_path: str = "config/preprocessing_config.yaml",
+        feature_config_path: str = "config/feature_config.yaml",
+        tfidf_vectorizer_path: str = "ml/feature_engineering/processed/tfidf_vectorizer.joblib"
+    ):
+        global _executor_instance
+        if _executor_instance is None:
+            logger.info("Initializing singleton instance of PipelineExecutor...")
+            _executor_instance = cls(
+                preprocessing_config_path, 
+                feature_config_path, 
+                tfidf_vectorizer_path
+            )
+        else:
+            logger.info("Returning cached singleton instance of PipelineExecutor.")
+        return _executor_instance
 
     def _init_preprocessing(self) -> None:
         """Initializes all NLP preprocessing components from Phase 3."""

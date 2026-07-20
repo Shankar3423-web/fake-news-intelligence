@@ -6,6 +6,9 @@ from typing import Dict, Any, List, Tuple
 
 logger = logging.getLogger("prediction_pipeline")
 
+_best_model_cache = None
+_all_models_cache = None
+
 class ModelLoader:
     """
     Loads the best trained classifier automatically using ml/evaluation/best_model.json.
@@ -26,6 +29,11 @@ class ModelLoader:
                 - feature_order: List of features expected by the model
                 - best_model_info: Contents of best_model.json
         """
+        global _best_model_cache
+        if _best_model_cache is not None:
+            logger.info("Returning cached best model.")
+            return _best_model_cache
+
         logger.info(f"Loading best model registry from {self.best_model_json_path}...")
         if not os.path.exists(self.best_model_json_path):
             raise FileNotFoundError(f"Best model descriptor file not found: {self.best_model_json_path}")
@@ -77,7 +85,9 @@ class ModelLoader:
             raise ValueError(f"Failed to parse model metadata file {metadata_path}: {e}")
 
         logger.info(f"Successfully loaded model '{model_key}' (Algorithm: {best_model_info.get('algorithm')}).")
-        return model, metadata, feature_order, best_model_info
+        
+        _best_model_cache = (model, metadata, feature_order, best_model_info)
+        return _best_model_cache
 
     def load_all_models(self) -> List[Dict[str, Any]]:
         """
@@ -90,6 +100,11 @@ class ModelLoader:
                 - metadata: Model training metadata
                 - feature_order: List of features expected by the model
         """
+        global _all_models_cache
+        if _all_models_cache is not None:
+            logger.info("Returning cached all models.")
+            return _all_models_cache
+
         logger.info(f"Loading all models from {self.models_root_dir}...")
         all_models = []
         
@@ -130,4 +145,5 @@ class ModelLoader:
                 continue
         
         logger.info(f"Successfully loaded {len(all_models)} models total.")
-        return all_models
+        _all_models_cache = all_models
+        return _all_models_cache
