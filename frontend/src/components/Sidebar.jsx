@@ -49,7 +49,6 @@ export default function Sidebar({ isOpen, setIsOpen }) {
     { name: 'History', path: '/history', icon: <IoTimeOutline className="w-5 h-5" /> },
     { name: 'Statistics', path: '/statistics', icon: <IoAnalyticsOutline className="w-5 h-5" /> },
     { name: 'Feedback', path: '/feedback', icon: <IoChatbubbleEllipsesOutline className="w-5 h-5" /> },
-    { name: 'Admin Panel', path: '/admin', icon: <IoLockClosedOutline className="w-5 h-5 text-amber-500 dark:text-amber-400" /> },
     { name: 'About', path: '/about', icon: <IoInformationCircleOutline className="w-5 h-5" /> },
   ];
 
