@@ -1,0 +1,62 @@
+{
+  "timestamp": 1784525208.3718574,
+  "provider": "newsapi",
+  "query": "Spain World Cup Argentina 2026 FIFA champions",
+  "response": [
+    {
+      "title": "Lionel Messi’s Final World Cup—and the Death of Early Retirement",
+      "description": "Argentina’s Lionel Messi was supposed to be done years ago. Now, sports science is helping soccer’s biggest stars rewrite the rules of aging.",
+      "content": "Mere moments after Argentina lost to France in a Round of 16 match during the 2018 World Cup in Russia, commentators were already predicting it would be his final time on a World Cup pitch. This was … [+3778 chars]",
+      "url": "https://www.wired.com/story/lionel-messis-final-world-cup-and-the-death-of-early-retirement/",
+      "source": "Wired",
+      "author": "Malak Saleh",
+      "published_date": "2026-07-15T16:28:43Z",
+      "language": "en",
+      "provider": "newsapi"
+    },
+    {
+      "title": "A larger World Cup had some worrying the competition would suffer. It hasn't",
+      "description": "This year's edition of the FIFA World Cup continues to be thrilling with unexpected performances from tournament first-timers and surprising results from some of the favorites.",
+      "content": "LOS ANGELES When FIFA announced that the 2026 World Cup would expand from 32 teams to 48, there was some grumbling.\r\nSoccer purists, a few anyway, fretted that the inclusion of lower-ranked countries… [+3147 chars]",
+      "url": "https://www.npr.org/2026/06/22/nx-s1-5865746/2026-world-cup-fifa-week-two",
+      "source": "NPR",
+      "author": "Russell Lewis",
+      "published_date": "2026-06-22T05:00:00Z",
+      "language": "en",
+      "provider": "newsapi"
+    },
+    {
+      "title": "These 8 teams are left in the World Cup: What to know",
+      "description": "The 2026 FIFA World Cup quarterfinals begin Thursday, July 9, as eight countries remain -- four past champions and four seeking a first-time title.",
+      "content": "After 95 games held over four weeks packed with upsets, hydration breaks, and late match comebacks, the stage is set for eight remaining nations to take the pitch in the 2026 FIFA World Cup quarterfi… [+2700 chars]",
+      "url": "https://abcnews.com/GMA/Culture/world-cup-quarterfinals-teams-schedules-france-morocco/story?id=134585600",
+      "source": "Abcnews.com",
+      "author": "Kelly McCarthy",
+      "published_date": "2026-07-09T17:24:19Z",
+      "language": "en",
+      "provider": "newsapi"
+    },
+    {
+      "title": "Argentina vs. Cape Verde: Stream FIFA World Cup 2026 Match Live for Free",
+      "description": "Can the tournament outsiders pull off a major shock against Lionel Messi and crew?",
+      "content": "Defending champions Argentina face a potential banana skin on Friday as they face 2026 World Cup surprise package Cape Verde in this Round of 32 clash in Miami. \r\nRead more: How to Find Local World C… [+4109 chars]",
+      "url": "https://www.cnet.com/tech/services-and-software/argentina-vs-cape-verde-stream-fifa-world-cup-2026-match-live-for-free/",
+      "source": "CNET",
+      "author": "Kevin Lynch",
+      "published_date": "2026-07-03T19:01:00Z",
+      "language": "en",
+      "provider": "newsapi"
+    },
+    {
+      "title": "How the World Cup Explains the World",
+      "description": "Postcolonialism. Global interdependence. Perhaps even a healthy kind of nationalism in 2026?",
+      "content": "Subscribe here: Apple Podcasts | Spotify | YouTube | Overcast | Pocket Casts\r\nIn the past two decades, international soccer has gotten a glow-up of sorts. Venture capital and oil money have poured in… [+29826 chars]",
+      "url": "https://www.theatlantic.com/podcasts/2026/06/how-world-cup-explains-world/687688/",
+      "source": "The Atlantic",
+      "author": "Hanna Rosin",
+      "published_date": "2026-06-25T14:00:00Z",
+      "language": "en",
+      "provider": "newsapi"
+    }
+  ]
+}

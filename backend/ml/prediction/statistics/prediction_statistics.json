@@ -1,8 +1,8 @@
 {
-    "total_predictions": 27,
-    "average_prediction_time_ms": 25.5277,
-    "average_memory_usage_mb": 0.0421,
-    "average_throughput_sps": 96.57,
-    "average_confidence": 0.6328,
+    "total_predictions": 31,
+    "average_prediction_time_ms": 28.5438,
+    "average_memory_usage_mb": 0.0392,
+    "average_throughput_sps": 89.01,
+    "average_confidence": 0.6397,
     "model_used": "svm"
 }

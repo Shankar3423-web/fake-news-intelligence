@@ -5,7 +5,7 @@ const api = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
-  timeout: 60000, // 60s timeout as the 12-phase pipeline searches multiple live APIs
+  timeout: 120000, // 120s timeout to allow full execution of the 12-phase multi-API pipeline
 });
 
 // Request Interceptor to add Authorization header

@@ -1,14 +1,14 @@
 {
-  "total_verifications": 23,
+  "total_verifications": 27,
   "verified_count": 0,
   "partially_verified_count": 4,
   "not_verified_count": 0,
   "conflicting_count": 1,
   "verification_success_rate": 0.0,
-  "average_similarity": 0.2151,
-  "average_api_time_seconds": 2.8633,
-  "average_provider_response_count": 3.6956,
-  "cache_hits": 6,
-  "cache_misses": 17,
-  "cache_hit_rate": 0.2609
+  "average_similarity": 0.2159,
+  "average_api_time_seconds": 3.2482,
+  "average_provider_response_count": 4.2592,
+  "cache_hits": 7,
+  "cache_misses": 20,
+  "cache_hit_rate": 0.2593
 }

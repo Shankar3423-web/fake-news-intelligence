@@ -1,8 +1,8 @@
 {
   "providers_used": [],
   "api_response_count": 0,
-  "verification_version": "verification_v23",
+  "verification_version": "verification_v27",
   "prediction_version": "unknown",
   "model_used": "svm",
-  "timestamp": "2026-07-19T22:21:00.608374"
+  "timestamp": "2026-07-20T11:19:00.804628"
 }

@@ -62,17 +62,17 @@ export default function VerifyNews() {
     }, 850); // Speed matching standard analysis time
 
     try {
-      // Execute the Ultimate consensus pipeline
-      const response = await predictionService.analyzeFull(title, text);
+      // Execute the Ultimate consensus pipeline and ensure at least 6s elapsed for animation
+      const [response] = await Promise.all([
+        predictionService.analyzeFull(title, text),
+        new Promise(resolve => setTimeout(resolve, 6000))
+      ]);
       
-      // Keep track of response data, but wait for pipeline steps to complete (or speed up if finished early)
-      setTimeout(() => {
-        clearInterval(stepInterval);
-        setActiveStep(7);
-        setResultData(response);
-        setStatus('completed');
-        addToast('News verification complete.', 'success');
-      }, 6000); // 6s duration of pipeline visual stages
+      clearInterval(stepInterval);
+      setActiveStep(7);
+      setResultData(response);
+      setStatus('completed');
+      addToast('News verification complete.', 'success');
     } catch (err) {
       clearInterval(stepInterval);
       setStatus('idle');
