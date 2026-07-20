@@ -205,14 +205,10 @@ def run_verification_pipeline(
                 charts_dir=config.get_path("charts_dir")
             )
             
-            temp_hashes = {
-                "report": "Generated during run",
-                "metadata": "Generated during run",
-                "statistics": "Generated during run",
-                "history": "Generated during run"
-            }
-            
-            rep_gen.generate_report(response, stats_data, temp_hashes, warnings)
+            # Create a placeholder file to prevent HashGenerator from failing
+            # This completely avoids rendering slow matplotlib charts twice
+            with open(config.get_path("verification_report_md"), "w", encoding="utf-8") as f:
+                f.write("Pending...")
 
         # Save Hashes Registry
         hashes_registry = {}

@@ -49,19 +49,19 @@ class ProviderManager:
 
     def fetch_all(self, query: str) -> List[Dict[str, Any]]:
         """
-        Queries all configured news providers with the search query.
+        Queries all configured news providers with the search query concurrently.
         Handles provider failures independently and merges the results.
         """
+        import concurrent.futures
         all_results = []
         
-        for provider in self.providers:
+        def fetch_from_provider(provider):
             provider_name = provider.name
             
             # Check cache first
             cached_response = self.cache_manager.get(provider_name, query)
             if cached_response is not None:
-                all_results.extend(cached_response)
-                continue
+                return cached_response
             
             # Rate limit before making outbound requests
             self.rate_limiter.wait(provider_name, self.config.rate_limit_delay)
@@ -79,8 +79,17 @@ class ProviderManager:
                 
                 # Cache results
                 self.cache_manager.set(provider_name, query, results)
-                all_results.extend(results)
+                return results
             except Exception as e:
                 logger.error(f"Provider '{provider_name}' failed to fetch news: {e}. Continuing pipeline...")
+                return []
+
+        if not self.providers:
+            return all_results
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=len(self.providers)) as executor:
+            futures = [executor.submit(fetch_from_provider, p) for p in self.providers]
+            for future in concurrent.futures.as_completed(futures):
+                all_results.extend(future.result())
                 
         return all_results
