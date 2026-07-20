@@ -84,14 +84,29 @@ def get_pending_reviews(
         
         pending_records = []
         for f in pending_feedbacks:
-            headline = f.prediction.title if (f.prediction and f.prediction.title) else (f.prediction.text_content[:60] + "..." if f.prediction else "Unknown Headline")
+            headline = f.prediction.title if (f.prediction and f.prediction.title) else (
+                f.prediction.text_content[:60] + "..." if (f.prediction and f.prediction.text_content) else "News Article"
+            )
+            pred_label = (f.prediction.predicted_label if f.prediction else "REAL").upper()
+            
+            # Calculate explicit User Correction (what label the user asserts the news actually is)
+            if f.is_correct:
+                user_correction = pred_label
+                user_feedback = "AGREE"
+            else:
+                user_correction = "FAKE" if pred_label == "REAL" else "REAL"
+                user_feedback = "DISAGREE"
+
             pending_records.append({
                 "Feedback ID": str(f.id),
+                "Prediction ID": str(f.prediction_id) if f.prediction_id else "N/A",
                 "Timestamp": f.created_at.isoformat() if f.created_at else None,
-                "Prediction": f.prediction.predicted_label if f.prediction else "UNKNOWN",
+                "Prediction": pred_label,
+                "User Correction": user_correction,
+                "Is Correct": f.is_correct,
+                "User Feedback": user_feedback,
                 "Verification": f.prediction.live_verifications[0].verdict if (f.prediction and f.prediction.live_verifications) else "UNVERIFIED",
-                "Final Decision": f.prediction.predicted_label if f.prediction else "UNKNOWN",
-                "User Feedback": "AGREE" if f.is_correct else "DISAGREE",
+                "Final Decision": pred_label,
                 "Comment": f.user_comment or "No comment provided",
                 "Similarity Score": 0.0,
                 "Evidence Score": 0.0,

@@ -144,10 +144,10 @@ export default function AdminPanel() {
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="border-b border-slate-100 dark:border-dark-border/40 text-xs font-bold text-text-secondary dark:text-dark-text-secondary uppercase bg-slate-50/50 dark:bg-slate-900/30">
-                <th className="py-4 px-6">ID & Timestamp</th>
-                <th className="py-4 px-6">Article Headline</th>
+                <th className="py-4 px-6">Feedback ID & Time</th>
+                <th className="py-4 px-6">News Article Title</th>
                 <th className="py-4 px-6">Model Verdict</th>
-                <th className="py-4 px-6">User Feedback</th>
+                <th className="py-4 px-6">User Correction</th>
                 <th className="py-4 px-6">User Comment</th>
                 <th className="py-4 px-6 text-center">Admin Action</th>
               </tr>
@@ -156,7 +156,7 @@ export default function AdminPanel() {
               {loading ? (
                 [...Array(3)].map((_, i) => (
                   <tr key={i} className="animate-pulse">
-                    <td className="py-4 px-6"><div className="h-4 bg-slate-200 dark:bg-slate-800 rounded w-16" /></td>
+                    <td className="py-4 px-6"><div className="h-4 bg-slate-200 dark:bg-slate-800 rounded w-24" /></td>
                     <td className="py-4 px-6"><div className="h-4 bg-slate-200 dark:bg-slate-800 rounded w-48" /></td>
                     <td className="py-4 px-6"><div className="h-4 bg-slate-200 dark:bg-slate-800 rounded w-16" /></td>
                     <td className="py-4 px-6"><div className="h-4 bg-slate-200 dark:bg-slate-800 rounded w-20" /></td>
@@ -177,47 +177,63 @@ export default function AdminPanel() {
               ) : (
                 pendingFeedbacks.map((f) => {
                   const fid = f["Feedback ID"];
+                  const pid = f["Prediction ID"];
                   const isProcessing = actionLoadingId === fid;
-                  const userAgreed = f["User Feedback"] === 'AGREE';
+                  
+                  const modelPred = (f.Prediction || 'REAL').toUpperCase();
+                  const isCorrect = f["Is Correct"] !== undefined 
+                    ? f["Is Correct"] 
+                    : (f["User Feedback"] === 'AGREE');
+                  
+                  // User Correction: if user disagreed, it's the opposite of Model Verdict; if agreed, it's same.
+                  const userCorrection = f["User Correction"] || (isCorrect ? modelPred : (modelPred === 'REAL' ? 'FAKE' : 'REAL'));
 
                   return (
                     <tr key={fid} className="hover:bg-slate-50/50 dark:hover:bg-slate-900/30 transition-colors">
                       {/* ID & Date */}
-                      <td className="py-4 px-6 font-mono text-xs text-text-secondary dark:text-dark-text-secondary">
-                        <span className="font-bold text-text-main dark:text-dark-text block">#{fid}</span>
-                        {f.Timestamp ? new Date(f.Timestamp).toLocaleDateString() : 'N/A'}
+                      <td className="py-4 px-6 font-mono text-xs text-text-secondary dark:text-dark-text-secondary whitespace-nowrap">
+                        <span className="font-bold text-text-main dark:text-dark-text block text-sm">#{fid}</span>
+                        {pid && pid !== 'N/A' && (
+                          <span className="text-[10px] text-text-secondary dark:text-dark-text-secondary block">Pred ID: #{pid}</span>
+                        )}
+                        <span className="text-[11px] text-text-secondary dark:text-dark-text-secondary block mt-1">
+                          {f.Timestamp ? new Date(f.Timestamp).toLocaleString() : 'N/A'}
+                        </span>
                       </td>
 
-                      {/* Headline */}
-                      <td className="py-4 px-6 font-semibold text-text-main dark:text-dark-text max-w-xs truncate">
-                        {f.Headline || f.Prediction || 'News Article'}
+                      {/* Article Title */}
+                      <td className="py-4 px-6 font-semibold text-text-main dark:text-dark-text max-w-xs">
+                        <div className="line-clamp-2 text-xs font-bold leading-relaxed text-text-main dark:text-dark-text" title={f.Headline || 'News Article'}>
+                          {f.Headline || 'News Article'}
+                        </div>
                       </td>
 
                       {/* Model Verdict */}
                       <td className="py-4 px-6">
-                        <span className={`px-2.5 py-1 rounded-lg text-xs font-bold uppercase ${
-                          f.Prediction === 'REAL'
+                        <span className={`px-2.5 py-1 rounded-lg text-xs font-bold uppercase inline-block ${
+                          modelPred === 'REAL'
                             ? 'bg-success-green/10 text-success-green border border-success-green/20'
                             : 'bg-danger-red/10 text-danger-red border border-danger-red/20'
                         }`}>
-                          {f.Prediction}
+                          {modelPred}
                         </span>
                       </td>
 
-                      {/* User Feedback */}
+                      {/* User Correction */}
                       <td className="py-4 px-6">
-                        <div className="flex items-center gap-1.5 text-xs font-semibold">
-                          {userAgreed ? (
-                            <>
-                              <IoThumbsUpOutline className="w-4 h-4 text-success-green" />
-                              <span className="text-success-green">Correct (Agrees)</span>
-                            </>
-                          ) : (
-                            <>
-                              <IoThumbsDownOutline className="w-4 h-4 text-danger-red" />
-                              <span className="text-danger-red">Incorrect (Disagrees)</span>
-                            </>
-                          )}
+                        <div className="flex flex-col gap-1">
+                          <span className={`px-2.5 py-1 rounded-lg text-xs font-bold uppercase inline-flex items-center gap-1.5 w-max ${
+                            userCorrection === 'REAL'
+                              ? 'bg-success-green/10 text-success-green border border-success-green/20'
+                              : 'bg-danger-red/10 text-danger-red border border-danger-red/20'
+                          }`}>
+                            {isCorrect ? (
+                              <IoThumbsUpOutline className="w-3.5 h-3.5" />
+                            ) : (
+                              <IoThumbsDownOutline className="w-3.5 h-3.5" />
+                            )}
+                            {userCorrection} ({isCorrect ? 'Agreed' : 'Disagreed'})
+                          </span>
                         </div>
                       </td>
 
@@ -245,7 +261,7 @@ export default function AdminPanel() {
                             title="Accept and approve for retraining"
                           >
                             <IoCheckmark className="w-4 h-4" />
-                            Accept
+                            Approve
                           </button>
                           
                           <button
